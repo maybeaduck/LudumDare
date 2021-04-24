@@ -5,7 +5,7 @@ namespace Zlodey
 {
     public class ShootingSystem : Injects, IEcsRunSystem
     {
-        private EcsFilter<PersonData, PlayerData>.Exclude<Reload> _filter;
+        private EcsFilter<PersonData, PlayerData>.Exclude<Reload,DieFlag> _filter;
         private EcsFilter<PersonData, Reload> _reload;
         private float _time;
         public void Run()

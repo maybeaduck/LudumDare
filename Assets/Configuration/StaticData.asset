@@ -20,6 +20,7 @@ MonoBehaviour:
   speedRotation: 10
   TestDamage: 10
   Bullet: {fileID: 5424988435887484498, guid: 6f2b0b3fa8787f646bb02a429e415401, type: 3}
-  BulletSpeed: 20
+  BulletSpeed: 60.1
   BulletCooldownTime: 0.2
   ShootFX: {fileID: 152484, guid: 23fc589b73077394db72d954703e8d1c, type: 3}
+  Visota: 0.1
