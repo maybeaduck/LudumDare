@@ -4,7 +4,7 @@ namespace Zlodey
 {
     public class HealthSystem : Injects, IEcsRunSystem
     {
-        private EcsFilter<CharacterStatsComponent, DamageEvent> _filter;
+        private EcsFilter<CharacterStatsComponent, DamageEvent>.Exclude<DieEvent> _filter;
         public void Run()
         {
             foreach (var i in _filter)
@@ -14,10 +14,12 @@ namespace Zlodey
 
                 characterStats.Health.Value -= damage;
 
-                if (characterStats.Health.Value < 0)
+                if (characterStats.Health.Value <= 0)
                 {
                     characterStats.Health.Value = 0;
+                    _filter.GetEntity(i).Get<DieEvent>();
                 }
+                
                 
                 if (characterStats.Health.Value > _filter.Get1(i).FullHealth)
                 {
@@ -27,5 +29,9 @@ namespace Zlodey
                 _filter.GetEntity(i).Del<DamageEvent>();
             }
         }
+    }
+
+    public struct DieEvent
+    {
     }
 }

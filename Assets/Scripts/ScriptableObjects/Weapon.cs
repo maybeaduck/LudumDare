@@ -9,5 +9,10 @@ namespace Zlodey
         public Transform ShootPoint;
         public float Damage;
         public float spread;
+        public int ammunition;
+        public int defaultAmunition;
+        public float reloadTime;
+        public int AllAmunitionInInvent;
+        public int DefaultAmunitionInInvent;
     }
 }

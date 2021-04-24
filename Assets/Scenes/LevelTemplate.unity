@@ -283,7 +283,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 570799299}
   m_LocalRotation: {x: -0, y: 0.83914226, z: -0.5439121, w: 0}
-  m_LocalPosition: {x: 0.28803182, y: 13.25, z: 5.9}
+  m_LocalPosition: {x: 0.59, y: 37.28, z: 23.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1261704387}
@@ -1181,7 +1181,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914029593}
   m_LocalRotation: {x: -0, y: 0.83914226, z: -0.5439121, w: 0}
-  m_LocalPosition: {x: 0.28803182, y: 13.25, z: 5.9}
+  m_LocalPosition: {x: 0.59, y: 37.28, z: 23.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1283794075}
@@ -1542,6 +1542,18 @@ PrefabInstance:
     - target: {fileID: 242795419135106560, guid: ded7a15563c6af84e831dc0c67e26b00, type: 3}
       propertyPath: spread
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 242795419135106560, guid: ded7a15563c6af84e831dc0c67e26b00, type: 3}
+      propertyPath: reloadTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 242795419135106560, guid: ded7a15563c6af84e831dc0c67e26b00, type: 3}
+      propertyPath: AllAmunitionInInvent
+      value: 175
+      objectReference: {fileID: 0}
+    - target: {fileID: 242795419135106560, guid: ded7a15563c6af84e831dc0c67e26b00, type: 3}
+      propertyPath: DefaultAmunitionInInvent
+      value: 175
       objectReference: {fileID: 0}
     - target: {fileID: 395619286031645992, guid: ded7a15563c6af84e831dc0c67e26b00, type: 3}
       propertyPath: Value
