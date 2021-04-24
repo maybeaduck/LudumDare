@@ -132,7 +132,6 @@ namespace Zlodey
                         _static.speedRotation * Time.deltaTime);
 
                 }
-
             }
         }
     }
