@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5934165206899752307}
   - component: {fileID: 5934165206899752306}
   - component: {fileID: 5934165206899752305}
+  - component: {fileID: 3683503157256475033}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -122,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2be5d3578b970d94b82dd246b54a0012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Animator: {fileID: 0}
+  Animator: {fileID: 5006554983443796747}
   Rigidbody: {fileID: 6127330605602325369}
   StatsComponent: {fileID: 9201274918695826071}
   Weapon: {fileID: 0}
@@ -139,6 +140,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actor: {fileID: 5934165206899752306}
+  EnemyType: 0
+  agent: {fileID: 3683503157256475033}
+  botSpeed: 15
+--- !u!195 &3683503157256475033
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5934165206899752301}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 8.29
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &1445741872367644314
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -215,6 +241,11 @@ PrefabInstance:
 --- !u!4 &1412714042457114993 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0e7d6921e6459134fb7aee7ae2489d04, type: 3}
+  m_PrefabInstance: {fileID: 1445741872367644314}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5006554983443796747 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 0e7d6921e6459134fb7aee7ae2489d04, type: 3}
   m_PrefabInstance: {fileID: 1445741872367644314}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6417360422030545954
