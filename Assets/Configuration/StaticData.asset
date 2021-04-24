@@ -18,4 +18,7 @@ MonoBehaviour:
   UIPrefab: {fileID: 7691685437204089913, guid: 6f8dd4d19d855b541a176a362c49f4f2, type: 3}
   speed: 10
   speedRotation: 10
-  TestDamage: 10
+  TestDamage: 0
+  Bullet: {fileID: 5424988435887484498, guid: 6f2b0b3fa8787f646bb02a429e415401, type: 3}
+  BulletSpeed: 20
+  BulletCooldownTime: 0.2

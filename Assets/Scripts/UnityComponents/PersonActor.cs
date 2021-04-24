@@ -11,12 +11,15 @@ public class PersonActor : MonoBehaviour
     public EcsEntity ThisEntity;
     public Rigidbody Rigidbody;
     public CharacterStats StatsComponent;
+    public Weapon Weapon;
+
     void Start()
     {
         var world = Service<EcsWorld>.Get();
         ThisEntity = world.NewEntity();
         ThisEntity.Get<PersonData>() = new PersonData()
         { 
+            Weapon = Weapon,
             Rigidbody = Rigidbody,
             Actor = this
         };
@@ -30,4 +33,5 @@ internal struct PersonData
 {
     public PersonActor Actor;
     public Rigidbody Rigidbody;
+    public Weapon Weapon;
 }
