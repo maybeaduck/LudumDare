@@ -88,7 +88,7 @@ namespace Zlodey
 
     internal class EnemyMoveSystem : IEcsRunSystem
     {
-        private EcsFilter<RushersData, EnemyData>.Exclude<DieFlag> _rushers;
+        private EcsFilter<RushersData, EnemyData,PersonData>.Exclude<DieFlag> _rushers;
         private EcsFilter<PlayerData, PersonData>.Exclude<DieFlag> _persons;
         public void Run()
         {
@@ -97,13 +97,16 @@ namespace Zlodey
                 ref var rushers = ref _rushers.Get1(item);
                 rushers.meshAgent.SetDestination(_persons.GetEntity(Random.Range(0, _persons.GetEntitiesCount() - 1))
                     .Get<PersonData>().Actor.transform.position);
+                _rushers.Get3(item).Actor.Animator.SetBool("Run",true);
             }
+            
         }
     }
 
     internal struct RushersData
     {
         public NavMeshAgent meshAgent;
+        public float botSpeed;
     }
 
     internal class LooseTriggerSystem : IEcsRunSystem
@@ -126,6 +129,7 @@ namespace Zlodey
     {
         private EcsFilter<PersonData, CharacterStatsComponent, DieEvent> _die;
         private EcsFilter<PersonData, DieFlag> _owerDie;
+        private EcsFilter<RushersData, DieFlag> _rushersDie;
         public void Run()
         {
             foreach (var item in _die)
@@ -137,6 +141,11 @@ namespace Zlodey
                 _die.GetEntity(item).Get<DieFlag>();
                 _die.GetEntity(item).Del<DieEvent>();
                 
+            }
+
+            foreach (var item in _rushersDie)
+            {
+                _rushersDie.Get1(item).meshAgent.Stop(true);
             }
         }
     }
