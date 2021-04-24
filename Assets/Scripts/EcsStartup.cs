@@ -4,6 +4,7 @@ using Zlodey;
 using Leopotam.Ecs;
 using LeopotamGroup.Globals;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace Zlodey
 {
@@ -35,6 +36,7 @@ namespace Zlodey
             _systems
                 .Add(new InitializeSystem())
                 .Add(new ChangeGameStateSystem())
+                .Add(new EnemyMoveSystem())
                 .Add(new PersonControlSystem())
                 .Add(new PersonLookAtMouseSystem())
                 .Add(new HealthSystem())
@@ -82,6 +84,26 @@ namespace Zlodey
                 _world = null;
             }
         }
+    }
+
+    internal class EnemyMoveSystem : IEcsRunSystem
+    {
+        private EcsFilter<RushersData, EnemyData>.Exclude<DieFlag> _rushers;
+        private EcsFilter<PlayerData, PersonData>.Exclude<DieFlag> _persons;
+        public void Run()
+        {
+            foreach (var item in _rushers)
+            {
+                ref var rushers = ref _rushers.Get1(item);
+                rushers.meshAgent.SetDestination(_persons.GetEntity(Random.Range(0, _persons.GetEntitiesCount() - 1))
+                    .Get<PersonData>().Actor.transform.position);
+            }
+        }
+    }
+
+    internal struct RushersData
+    {
+        public NavMeshAgent meshAgent;
     }
 
     internal class LooseTriggerSystem : IEcsRunSystem

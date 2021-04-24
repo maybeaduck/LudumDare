@@ -23,4 +23,4 @@ MonoBehaviour:
   BulletSpeed: 60.1
   BulletCooldownTime: 0.2
   ShootFX: {fileID: 152484, guid: 23fc589b73077394db72d954703e8d1c, type: 3}
-  Visota: 0.1
+  Visota: 3
