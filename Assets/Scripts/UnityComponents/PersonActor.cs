@@ -35,7 +35,10 @@ public class PersonActor : MonoBehaviour
             var View = other.GetComponent<ViewBullet>();
             
             ThisEntity.Get<DamageEvent>() = new DamageEvent() { Value = View.actor.Weapon.Damage};
-            _world.NewEntity().Get<HitBulletEvent>().OnHitTransform = View.actor.transform;
+            _world.NewEntity().Get<HitBulletEvent>() = new HitBulletEvent()
+            {
+                OnHitTransform = View.actor.transform,Target = this.gameObject
+            };
             View.actor.gameObject.SetActive(false);
         }
     }
@@ -44,6 +47,7 @@ public class PersonActor : MonoBehaviour
 internal struct HitBulletEvent
 {
     public Transform OnHitTransform;
+    public GameObject Target;
 }
 
 internal struct PersonData
