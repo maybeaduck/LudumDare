@@ -8,5 +8,6 @@ namespace Zlodey
     {
         public Transform ShootPoint;
         public float Damage;
+        public float spread;
     }
 }

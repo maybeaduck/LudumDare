@@ -16,10 +16,13 @@ namespace Zlodey
                 var speed = Config.BulletSpeed;
                 
                 var bullet = ObjectPoolController.Instance.SpawnFromPool("bullet",transform.position,transform.rotation).GetComponent<Bullet>();
-                var direction = bullet.transform.forward * speed;
                 bullet.Weapon = weapon;
                 
-                bullet.Rigidbody.velocity = direction;
+                var direction = (bullet.transform.forward  ) * speed;
+                direction = direction + new Vector3(Random.Range(-bullet.Weapon.spread, bullet.Weapon.spread),
+                    Random.Range(-bullet.Weapon.spread, bullet.Weapon.spread), Random.Range(-bullet.Weapon.spread, bullet.Weapon.spread));
+                
+                bullet.Rigidbody.velocity = direction.normalized * speed;
             }
         }
     }

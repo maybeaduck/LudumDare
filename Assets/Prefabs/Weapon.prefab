@@ -76,3 +76,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShootPoint: {fileID: 5872663735295046271}
   Damage: 5
+  spread: 0.5
