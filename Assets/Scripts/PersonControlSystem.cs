@@ -21,14 +21,9 @@ namespace Zlodey
 
                 rigidbody.velocity = -normalDirection;
 
-                if (Mathf.Abs(normalDirection.x) > 0 || Mathf.Abs(normalDirection.z) > 0)
-                {
-                    person.Animator.SetBool("Run", true);
-                }
-                else
-                {
-                    person.Animator.SetBool("Run", false);
-                }
+                
+                var isRun = normalDirection.magnitude > 1 ? true : false;
+                person.Animator.SetBool("Run", isRun);
 
 
             }
