@@ -15,5 +15,6 @@ namespace Zlodey
         public UI UIPrefab;
         public float speed;
         public float speedRotation;
+        public float TestDamage;
     }
 }
