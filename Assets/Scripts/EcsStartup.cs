@@ -120,7 +120,7 @@ namespace Zlodey
             foreach (var item in _activePersons)
             {
                 Debug.Log("WhoNotWork");
-                ref var person = ref _activePersons.Get1(item).actor;
+                ref var person = ref _activePersons.Get1(item).Actor;
                 var position = person.transform.position;
                 Plane plane = new Plane(Vector3.up,position);
                 Ray ray = _scene.Camera.ScreenPointToRay(Input.mousePosition);
