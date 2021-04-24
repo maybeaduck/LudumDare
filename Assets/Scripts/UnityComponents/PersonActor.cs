@@ -33,6 +33,7 @@ public class PersonActor : MonoBehaviour
         if (other.CompareTag("Bullet"))
         {
             var View = other.GetComponent<ViewBullet>();
+            
             ThisEntity.Get<DamageEvent>() = new DamageEvent() { Value = View.actor.Weapon.Damage};
         }
     }
