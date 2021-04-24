@@ -10,7 +10,6 @@ namespace Zlodey
         {
             foreach (var item in _filter)
             {
-                ref var entity = ref _filter.GetEntity(item);
                 ref var transform = ref _filter.Get1(item).Transform;
                 ref var weapon = ref _filter.Get1(item).Weapon;
                 var bulletPrefab = Config.Bullet;
@@ -21,7 +20,6 @@ namespace Zlodey
                 bullet.Weapon = weapon;
                 
                 bullet.Rigidbody.velocity = direction;
-                entity.Del<ShootEvent>();
             }
         }
     }

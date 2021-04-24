@@ -22,3 +22,4 @@ MonoBehaviour:
   Bullet: {fileID: 5424988435887484498, guid: 6f2b0b3fa8787f646bb02a429e415401, type: 3}
   BulletSpeed: 20
   BulletCooldownTime: 0.2
+  ShootFX: {fileID: 105160, guid: 8deb1def3de25b04b8371070fbb372fe, type: 3}
