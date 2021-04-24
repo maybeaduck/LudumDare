@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Leopotam.Ecs;
@@ -26,7 +27,15 @@ public class PersonActor : MonoBehaviour
         ThisEntity.Get<CharacterStatsComponent>() = new CharacterStatsComponent(){CharacterStats = StatsComponent,FullHealth = StatsComponent.Health.Value};
     }
 
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        
+        if (other.CompareTag("Bullet"))
+        {
+            var View = other.GetComponent<ViewBullet>();
+            ThisEntity.Get<DamageEvent>() = new DamageEvent() { Value = View.actor.Weapon.Damage};
+        }
+    }
 }
 
 internal struct PersonData

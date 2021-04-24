@@ -36,6 +36,7 @@ namespace Zlodey
                 .Add(new InitializeSystem())
                 .Add(new ChangeGameStateSystem())
                 .Add(new PersonControlSystem())
+                .Add(new CheckDamageSystem())
                 .Add(new HealthSystem())
                 .Add(new TestDamageSystem())
                 .Add(new PersonLookAtMouseSystem())
@@ -79,6 +80,15 @@ namespace Zlodey
         }
     }
 
-
-
+    internal class CheckDamageSystem : IEcsRunSystem
+    {
+        private EcsFilter<CharacterStatsComponent> _filter;
+        public void Run()
+        {
+            foreach (var item in _filter)
+            {
+                
+            }
+        }
+    }
 }

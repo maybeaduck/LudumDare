@@ -6,5 +6,7 @@ namespace Zlodey
     {
         public Health Health;
         public Damage Damage;
+        
+        
     }
 }

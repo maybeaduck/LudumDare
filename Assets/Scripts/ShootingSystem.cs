@@ -18,7 +18,7 @@ namespace Zlodey
                     {
                         ref var entity = ref _filter.GetEntity(item);
                         ref var shootPoint = ref _filter.Get1(item).Weapon.ShootPoint;
-                        entity.Get<ShootEvent>().Transform = shootPoint;
+                        entity.Get<ShootEvent>() = new ShootEvent(){Transform = shootPoint,Weapon = _filter.Get1(item).Weapon};
 
                         var cooldownTime = Config.BulletCooldownTime;
                         _time = Time.time + cooldownTime;

@@ -7,5 +7,6 @@ namespace Zlodey
     public class Weapon : MonoBehaviour
     {
         public Transform ShootPoint;
+        public float Damage;
     }
 }
