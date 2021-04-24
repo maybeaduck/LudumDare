@@ -36,6 +36,8 @@ namespace Zlodey
                 .Add(new InitializeSystem())
                 .Add(new ChangeGameStateSystem())
                 .Add(new PersonControlSystem())
+                .Add(new HealthSystem())
+                .Add(new TestDamageSystem())
                 .Add(new PersonLookAtMouseSystem())
                 .Add(new WinSystem())
                 .Add(new LoseSystem())
@@ -72,6 +74,32 @@ namespace Zlodey
                 _systems = null;
                 _world.Destroy();
                 _world = null;
+            }
+        }
+    }
+
+    internal class TestDamageSystem : IEcsRunSystem
+    {
+        private EcsWorld _world;
+        private StaticData _static;
+        private EcsFilter<CharacterStatsComponent, PlayerData> _player;
+        public void Run()
+        {
+            if (Input.GetKeyUp(KeyCode.P))
+            {
+                foreach (var item in _player)
+                {
+                   _player.GetEntity(item).Get<DamageEvent>().Value = _static.TestDamage;
+                }
+                
+            }
+            if (Input.GetKeyUp(KeyCode.H))
+            {
+                foreach (var item in _player)
+                {
+                    _player.GetEntity(item).Get<DamageEvent>().Value = -10;
+                }
+                
             }
         }
     }
@@ -114,7 +142,7 @@ namespace Zlodey
         private RuntimeData _runtime;
         private SceneData _scene;
         private StaticData _static;
-        private EcsFilter<PersonData>.Exclude<StandFlag> _activePersons;
+        private EcsFilter<PersonData,PlayerData>.Exclude<StandFlag> _activePersons;
         public void Run()
         {
             

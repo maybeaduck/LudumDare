@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 7446812095289364390}
   - component: {fileID: 7086961146088335722}
   - component: {fileID: 5391813168258072715}
+  - component: {fileID: 395619286031645992}
+  - component: {fileID: 1052787438}
   m_Layer: 0
   m_Name: Person
   m_TagString: Untagged
@@ -28,7 +30,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7437849382074273649}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -67,6 +69,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Animator: {fileID: 3914218732005724716}
   Rigidbody: {fileID: 6947446684885905765}
+  StatsComponent: {fileID: 5391813168258072715}
 --- !u!114 &7446812095289364390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,6 +112,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: {fileID: 7446812095289364390}
   Damage: {fileID: 0}
+--- !u!114 &395619286031645992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7437849382074273649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e0f6cb52a584e40939cb918f129073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Value: 0
+--- !u!114 &1052787438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7437849382074273649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dfc86e9b47ea0a42af2bf14b1f51d7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPerson: {fileID: 3546216186503346818}
 --- !u!1001 &7437849382984167357
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -176,6 +205,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dreyar_m_aure
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 038294dac56d2d646941989b50086ee0, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 278a72ea15d41f245a7164e9597397ae, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 038294dac56d2d646941989b50086ee0, type: 3}
 --- !u!4 &6967690836580255830 stripped

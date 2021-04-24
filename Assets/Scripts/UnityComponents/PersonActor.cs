@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using Leopotam.Ecs;
 using LeopotamGroup.Globals;
 using UnityEngine;
+using Zlodey;
 
 public class PersonActor : MonoBehaviour
 {
     public Animator Animator;
     public EcsEntity ThisEntity;
     public Rigidbody Rigidbody;
-
+    public CharacterStats StatsComponent;
     void Start()
     {
         var world = Service<EcsWorld>.Get();
@@ -19,6 +20,7 @@ public class PersonActor : MonoBehaviour
             Rigidbody = Rigidbody,
             Actor = this
         };
+        ThisEntity.Get<CharacterStatsComponent>() = new CharacterStatsComponent(){CharacterStats = StatsComponent,FullHealth = StatsComponent.Health.Value};
     }
 
     
