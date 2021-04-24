@@ -41,6 +41,7 @@ namespace Zlodey
                 .Add(new PersonLookAtMouseSystem())
                 .Add(new WinSystem())
                 .Add(new LoseSystem())
+                .Add(new ShootSystem())
                 
 
                 .Inject(_runtime)

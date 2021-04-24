@@ -16,5 +16,10 @@ namespace Zlodey
         public float speed;
         public float speedRotation;
         public float TestDamage;
+
+        [Header("Bullet")]
+        public Bullet Bullet;
+        public float BulletSpeed;
+        public float BulletCooldownTime;
     }
 }
