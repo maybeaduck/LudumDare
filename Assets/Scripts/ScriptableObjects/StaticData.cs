@@ -15,5 +15,10 @@ namespace Zlodey
         public UI UIPrefab;
         public float speed;
         public float speedRotation;
+
+        [Header("Bullet")]
+        public Bullet Bullet;
+        public float BulletSpeed;
+        public float BulletCooldownTime;
     }
 }
