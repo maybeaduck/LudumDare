@@ -39,6 +39,7 @@ namespace Zlodey
                 .Add(new HealthSystem())
                 .Add(new TestDamageSystem())
                 .Add(new PersonLookAtMouseSystem())
+                .Add(new DieSystem())
                 .Add(new WinSystem())
                 .Add(new LoseSystem())
                 .Add(new ShootingSystem())
@@ -81,5 +82,12 @@ namespace Zlodey
         }
     }
 
-
+    internal class DieSystem : IEcsRunSystem
+    {
+        
+        public void Run()
+        {
+            
+        }
+    }
 }

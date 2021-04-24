@@ -77,3 +77,5 @@ MonoBehaviour:
   ShootPoint: {fileID: 5872663735295046271}
   Damage: 5
   spread: 0.5
+  ammunition: 35
+  defaultAmunition: 35
