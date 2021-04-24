@@ -3,6 +3,7 @@ using Leopotam.Ecs;
 using LeopotamGroup.Globals;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace Zlodey {
     public class Helper
@@ -36,6 +37,12 @@ namespace Zlodey {
                 currentLevel = scenesData.SkipLevels + currentLevel % (totalLevels - scenesData.SkipLevels);
             }
             SceneManager.LoadScene(scenesData[currentLevel]);
+        }
+
+        public static void InitSlider(Slider slider, float value)
+        {
+            slider.maxValue = value;
+            slider.value = value;
         }
     }
 }
