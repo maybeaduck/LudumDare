@@ -13,7 +13,7 @@ namespace Zlodey
                 ref var transform = ref _filter.Get1(item).Transform;
                 var fxPrefab = Config.ShootFX;
 
-                GameObject.Instantiate(fxPrefab, transform.position, transform.rotation);
+                GameObject.Instantiate(fxPrefab, transform);
             }
         }
     }
