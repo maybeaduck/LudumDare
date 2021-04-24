@@ -13,6 +13,7 @@ namespace Zlodey
             foreach (var index in _eventFilter)
             {
                 World.NewEntity().Get<ChangeGameStateEvent>().State = GameState.Lose;
+                
                 _eventFilter.GetEntity(index).Destroy();
             }
         }

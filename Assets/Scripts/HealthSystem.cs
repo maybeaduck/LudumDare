@@ -4,7 +4,7 @@ namespace Zlodey
 {
     public class HealthSystem : Injects, IEcsRunSystem
     {
-        private EcsFilter<CharacterStatsComponent, DamageEvent>.Exclude<DieEvent> _filter;
+        private EcsFilter<CharacterStatsComponent, DamageEvent>.Exclude<DieEvent,DieFlag> _filter;
         public void Run()
         {
             foreach (var i in _filter)

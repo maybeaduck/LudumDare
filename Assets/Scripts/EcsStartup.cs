@@ -36,10 +36,12 @@ namespace Zlodey
                 .Add(new InitializeSystem())
                 .Add(new ChangeGameStateSystem())
                 .Add(new PersonControlSystem())
+                .Add(new PersonLookAtMouseSystem())
                 .Add(new HealthSystem())
                 .Add(new TestDamageSystem())
-                .Add(new PersonLookAtMouseSystem())
+                
                 .Add(new DieSystem())
+                .Add(new LooseTriggerSystem())
                 .Add(new WinSystem())
                 .Add(new LoseSystem())
                 .Add(new ShootingSystem())
@@ -82,12 +84,42 @@ namespace Zlodey
         }
     }
 
-    internal class DieSystem : IEcsRunSystem
+    internal class LooseTriggerSystem : IEcsRunSystem
     {
-        
+        private EcsWorld _world;
+        private EcsFilter<PlayerData>.Exclude<DieFlag> _livePlayers;
+        private EcsFilter<PlayerData, DieFlag> _diePlayers;
+        private EcsFilter<LoseEvent> _lose;
         public void Run()
         {
-            
+            if (_livePlayers.IsEmpty() && !_diePlayers.IsEmpty()  && _lose.IsEmpty())
+            {
+                Debug.Log("YouLose");
+                _world.NewEntity().Get<LoseEvent>();
+            }
         }
+    }
+
+    internal class DieSystem : IEcsRunSystem
+    {
+        private EcsFilter<PersonData, CharacterStatsComponent, DieEvent> _die;
+        private EcsFilter<PersonData, DieFlag> _owerDie;
+        public void Run()
+        {
+            foreach (var item in _die)
+            {
+                ref var personData = ref _die.Get1(item);
+                personData.Actor.Animator.SetBool("Die",true);
+                personData.Actor.GetComponent<Collider>().enabled = false;
+                personData.Rigidbody.isKinematic = true;
+                _die.GetEntity(item).Get<DieFlag>();
+                _die.GetEntity(item).Del<DieEvent>();
+                
+            }
+        }
+    }
+
+    internal struct DieFlag
+    {
     }
 }
