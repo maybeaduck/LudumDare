@@ -18,7 +18,6 @@ namespace Zlodey
                     Input.GetAxis("Horizontal"),
                     0,
                     Input.GetAxis("Vertical")).normalized * speed;
-                Debug.Log("normalDirection" + normalDirection);
                 
                 rigidbody.velocity = -normalDirection;
 

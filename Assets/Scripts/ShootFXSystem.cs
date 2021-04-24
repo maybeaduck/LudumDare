@@ -5,15 +5,38 @@ namespace Zlodey
 {
     public class ShootFXSystem : Injects, IEcsRunSystem
     {
-        private EcsFilter<ShootEvent> _filter;
+        private EcsFilter<ShootEvent> _shootFilter;
+        private EcsFilter<HitBulletEvent> _hitFilter;
         public void Run()
         {
-            foreach (var item in _filter)
+            foreach (var item in _shootFilter)
             {
-                ref var transform = ref _filter.Get1(item).Transform;
-                var fxPrefab = Config.ShootFX;
+                ref var transform = ref _shootFilter.Get1(item).Transform;
+                var shootFX = Config.ShootFX;
 
-                GameObject.Instantiate(fxPrefab, transform);
+                GameObject.Instantiate(shootFX, transform);
+            }
+
+            foreach (var item in _hitFilter)
+            {
+                ref var entity = ref _hitFilter.GetEntity(item);
+                ref var target = ref _hitFilter.Get1(item).Target;
+                ref var transform = ref _hitFilter.Get1(item).OnHitTransform;
+
+                var hitEnemyFX = Config.HitEnemyFX;
+                var hitWallFX = Config.HitWallFX;
+
+                switch (target.tag)
+                {
+                    case "Enemy":
+                        GameObject.Instantiate(hitEnemyFX, transform.position, transform.rotation);
+                        break;
+                    case "Wall":
+                        GameObject.Instantiate(hitWallFX, transform.position, transform.rotation);
+                        break;
+                }
+
+                entity.Del<HitBulletEvent>();
             }
         }
     }
