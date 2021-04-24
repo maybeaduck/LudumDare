@@ -12,7 +12,7 @@ public class PersonActor : MonoBehaviour
     {
         var world = Service<EcsWorld>.Get();
         ThisEntity = world.NewEntity();
-        ThisEntity.Get<PersonData>() = new PersonData(){actor = this};
+        ThisEntity.Get<PersonData>() = new PersonData(){ Actor = this};
     }
 
     
@@ -20,6 +20,7 @@ public class PersonActor : MonoBehaviour
 
 internal struct PersonData
 {
-    public PersonActor actor;
+    public PersonActor Actor;
+    public Rigidbody Rigidbody;
     
 }
