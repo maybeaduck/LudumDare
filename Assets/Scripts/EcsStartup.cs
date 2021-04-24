@@ -77,7 +77,7 @@ namespace Zlodey
 
     internal class PersonControlSystem : Injects, IEcsRunSystem
     {
-        private EcsFilter<PersonData>.Exclude<StandFlag> _activePersons;
+        private EcsFilter<PersonData,PlayerData>.Exclude<StandFlag> _activePersons;
         public void Run()
         {
 
