@@ -1,5 +1,33 @@
 {
   "dependencies": {
+    "com.dbrizov.naughtyattributes": {
+      "version": "https://github.com/dbrizov/NaughtyAttributes.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "fc456992b4d08ba8460567f7f5b629df76dbe059"
+    },
+    "com.leopotam.ecs": {
+      "version": "https://github.com/Leopotam/ecs.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "e400d0f60ad8240568f675f40a549d5e71949a35"
+    },
+    "com.leopotam.ecs-unityintegration": {
+      "version": "https://github.com/Leopotam/ecs-unityintegration.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "127d6a8f02ec987ac724a7fc671b1d5d00b0ea56"
+    },
+    "com.leopotam.globals": {
+      "version": "https://github.com/Leopotam/globals.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "740d6ddbd9ed39947f2153c63bc2654d04e5b8c8"
+    },
     "com.unity.collab-proxy": {
       "version": "1.3.9",
       "depth": 0,
