@@ -36,6 +36,7 @@ namespace Zlodey
                 .Add(new InitializeSystem())
                 .Add(new ChangeGameStateSystem())
                 .Add(new PersonControlSystem())
+                .Add(new HealthSystem())
                 .Add(new TestDamageSystem())
                 .Add(new PersonLookAtMouseSystem())
                 .Add(new WinSystem())
@@ -83,11 +84,19 @@ namespace Zlodey
         private EcsFilter<CharacterStatsComponent, PlayerData> _player;
         public void Run()
         {
-            if (Input.GetKey(KeyCode.P))
+            if (Input.GetKeyUp(KeyCode.P))
             {
                 foreach (var item in _player)
                 {
                    _player.GetEntity(item).Get<DamageEvent>().Value = _static.TestDamage;
+                }
+                
+            }
+            if (Input.GetKeyUp(KeyCode.H))
+            {
+                foreach (var item in _player)
+                {
+                    _player.GetEntity(item).Get<DamageEvent>().Value = -10;
                 }
                 
             }

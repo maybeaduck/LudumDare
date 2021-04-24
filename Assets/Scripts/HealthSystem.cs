@@ -18,6 +18,13 @@ namespace Zlodey
                 {
                     characterStats.Health.Value = 0;
                 }
+
+                if (characterStats.Health.Value > _filter.Get1(i).FullHealth)
+                {
+                    characterStats.Health.Value = _filter.Get1(i).FullHealth;
+                }
+                characterStats.Health.HealthSlider.value = characterStats.Health.Value;
+                _filter.GetEntity(i).Del<DamageEvent>();
             }
         }
     }

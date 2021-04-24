@@ -9,6 +9,7 @@ public class EnemyActor : MonoBehaviour
     void Start()
     {
         actor.ThisEntity.Get<EnemyData>();
+        
     }
 
 }
