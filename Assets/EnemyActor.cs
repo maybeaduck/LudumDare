@@ -6,8 +6,9 @@ using UnityEngine;
 public class EnemyActor : MonoBehaviour
 {
     public PersonActor actor;
-    void Start()
+    IEnumerator Start()
     {
+        yield return null;
         actor.ThisEntity.Get<EnemyData>();
         
     }

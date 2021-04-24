@@ -31,17 +31,21 @@ public class ObjectPoolController : MonoBehaviour
             var objectPool = new Queue<GameObject>();
             for (int i = 0; i < pool.size; i++)
             {
+                Debug.Log("POOOOOOLLL");
                 var obj = Instantiate(pool.prefab);
                 IPooledObject pooledObj = obj.GetComponent<IPooledObject>();
 
                 if (pooledObj != null)
                 {
+                    Debug.Log("POOOOOLLLLL");
                     pooledObj.SetPool(objectPool);
+                    objectPool.Enqueue(obj);
                 }
                 obj.SetActive(false);
             }
-
+            Debug.Log("PoolSize" + objectPool.Count);
             poolDictionary.Add(pool.tag, objectPool);
+            
         }
     }
 
@@ -52,7 +56,7 @@ public class ObjectPoolController : MonoBehaviour
             Debug.LogWarning("Pool with tag "+ tag + " doesnt excist.");
             return null;
         }
-
+        Debug.Log(poolDictionary[tag].Count);
         var queue = poolDictionary[tag];
         
         GameObject objectToSpawn = queue.Dequeue();
@@ -68,7 +72,7 @@ public class ObjectPoolController : MonoBehaviour
             pooledObj.SetPool(queue);
         }
         
-        //poolDictionary[tag].Enqueue(objectToSpawn);
+        poolDictionary[tag].Enqueue(objectToSpawn);
         return objectToSpawn;
     }
 }

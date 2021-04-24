@@ -15,10 +15,11 @@ namespace Zlodey
                 ref var rigidbody = ref _activePersons.Get1(item).Rigidbody;
                 var speed = Config.speed;
                 var normalDirection = new Vector3(
-                    Input.GetAxis("Horizontal") * speed,
-                    person.transform.position.y,
-                    Input.GetAxis("Vertical") * speed);
-
+                    Input.GetAxis("Horizontal"),
+                    0,
+                    Input.GetAxis("Vertical")).normalized * speed;
+                Debug.Log("normalDirection" + normalDirection);
+                
                 rigidbody.velocity = -normalDirection;
 
                 
