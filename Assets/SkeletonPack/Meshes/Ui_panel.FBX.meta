@@ -1,0 +1,152 @@
+fileFormatVersion: 2
+guid: 030270290a384cc284926a2610f6060a
+timeCreated: 1429148461
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: armL_glow_select
+    100002: armR_glow_select
+    100004: belt_glow_select
+    100006: FX_glow_select
+    100008: head_buttonB_glow
+    100010: head_buttonD_glow
+    100012: head_buttonN_glow
+    100014: head_glow_select
+    100016: legL_glow_select
+    100018: legR_glow_select
+    100020: Plane01
+    100022: shjoulderL_glow_select
+    100024: shoulderR_glow_select01
+    100026: Summonn_button
+    100028: torso_glow_select01
+    100030: //RootNode
+    100032: weaponL_glow_select
+    100034: weaponR_glow_select
+    400000: armL_glow_select
+    400002: armR_glow_select
+    400004: belt_glow_select
+    400006: FX_glow_select
+    400008: head_buttonB_glow
+    400010: head_buttonD_glow
+    400012: head_buttonN_glow
+    400014: head_glow_select
+    400016: legL_glow_select
+    400018: legR_glow_select
+    400020: Plane01
+    400022: shjoulderL_glow_select
+    400024: shoulderR_glow_select01
+    400026: Summonn_button
+    400028: torso_glow_select01
+    400030: //RootNode
+    400032: weaponL_glow_select
+    400034: weaponR_glow_select
+    2300000: armL_glow_select
+    2300002: armR_glow_select
+    2300004: belt_glow_select
+    2300006: FX_glow_select
+    2300008: head_buttonB_glow
+    2300010: head_buttonD_glow
+    2300012: head_buttonN_glow
+    2300014: head_glow_select
+    2300016: legL_glow_select
+    2300018: legR_glow_select
+    2300020: Plane01
+    2300022: shjoulderL_glow_select
+    2300024: shoulderR_glow_select01
+    2300026: Summonn_button
+    2300028: torso_glow_select01
+    2300030: weaponL_glow_select
+    2300032: weaponR_glow_select
+    3300000: armL_glow_select
+    3300002: armR_glow_select
+    3300004: belt_glow_select
+    3300006: FX_glow_select
+    3300008: head_buttonB_glow
+    3300010: head_buttonD_glow
+    3300012: head_buttonN_glow
+    3300014: head_glow_select
+    3300016: legL_glow_select
+    3300018: legR_glow_select
+    3300020: Plane01
+    3300022: shjoulderL_glow_select
+    3300024: shoulderR_glow_select01
+    3300026: Summonn_button
+    3300028: torso_glow_select01
+    3300030: weaponL_glow_select
+    3300032: weaponR_glow_select
+    4300000: Plane01
+    4300002: head_glow_select
+    4300004: shoulderR_glow_select01
+    4300006: shjoulderL_glow_select
+    4300008: FX_glow_select
+    4300010: armR_glow_select
+    4300012: armL_glow_select
+    4300014: belt_glow_select
+    4300016: weaponL_glow_select
+    4300018: weaponR_glow_select
+    4300020: legL_glow_select
+    4300022: legR_glow_select
+    4300024: torso_glow_select01
+    4300026: head_buttonB_glow
+    4300028: head_buttonN_glow
+    4300030: head_buttonD_glow
+    4300032: Summonn_button
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 2
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
