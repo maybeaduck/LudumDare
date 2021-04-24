@@ -31,19 +31,19 @@ public class ObjectPoolController : MonoBehaviour
             var objectPool = new Queue<GameObject>();
             for (int i = 0; i < pool.size; i++)
             {
-                Debug.Log("POOOOOOLLL");
+                //Debug.Log("POOOOOOLLL");
                 var obj = Instantiate(pool.prefab);
                 IPooledObject pooledObj = obj.GetComponent<IPooledObject>();
 
                 if (pooledObj != null)
                 {
-                    Debug.Log("POOOOOLLLLL");
+                    //Debug.Log("POOOOOLLLLL");
                     pooledObj.SetPool(objectPool);
                     objectPool.Enqueue(obj);
                 }
                 obj.SetActive(false);
             }
-            Debug.Log("PoolSize" + objectPool.Count);
+            //Debug.Log("PoolSize" + objectPool.Count);
             poolDictionary.Add(pool.tag, objectPool);
             
         }

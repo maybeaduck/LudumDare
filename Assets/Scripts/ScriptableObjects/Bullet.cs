@@ -16,7 +16,7 @@ namespace Zlodey
 
         public void SetPool(Queue<GameObject> pool)
         {
-            Debug.Log("ИДИ ОТСЮДА БАГ УХАДИ");
+            //Debug.Log("ИДИ ОТСЮДА БАГ УХАДИ");
         }
     }
 }
