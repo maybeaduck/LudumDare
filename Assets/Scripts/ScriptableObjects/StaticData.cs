@@ -21,5 +21,6 @@ namespace Zlodey
         public Bullet Bullet;
         public float BulletSpeed;
         public float BulletCooldownTime;
+        public GameObject ShootFX;
     }
 }

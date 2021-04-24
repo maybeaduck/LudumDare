@@ -43,7 +43,9 @@ namespace Zlodey
                 .Add(new LoseSystem())
                 .Add(new ShootingSystem())
                 .Add(new MoveBulletSystem())
-                
+                .Add(new ShootFXSystem())
+
+                .OneFrame<ShootEvent>()
 
                 .Inject(_runtime)
                 .Inject(_config)
