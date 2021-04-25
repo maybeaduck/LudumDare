@@ -30,5 +30,7 @@ namespace Zlodey
         [Header("Dash")]
         public float DashCooldownTime;
         public float DashSpeed;
+        public float sceletonDistanceToPlayer;
+        public float sceletonDistanceBackDistance;
     }
 }
