@@ -58,8 +58,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55da553970249f4388c80d2d3a6b14d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PersonActor: {fileID: 0}
-  EnemyActor: {fileID: 0}
+  PersonActor: {fileID: 5934165206899752306}
+  EnemyActor: {fileID: 5934165206899752305}
 --- !u!114 &3005483596390749835
 MonoBehaviour:
   m_ObjectHideFlags: 0
