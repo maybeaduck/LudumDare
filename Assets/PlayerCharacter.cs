@@ -31,6 +31,5 @@ public class PlayerCharacter : MonoBehaviour
 
 internal struct PlayerData
 {
-    public float Speed;
     public Vector3 Direction;
 }

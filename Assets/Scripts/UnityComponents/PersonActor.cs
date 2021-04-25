@@ -13,6 +13,7 @@ public class PersonActor : MonoBehaviour
     public Rigidbody Rigidbody;
     public CharacterStats StatsComponent;
     public Weapon Weapon;
+
     private EcsWorld _world;
     void Start()
     {
