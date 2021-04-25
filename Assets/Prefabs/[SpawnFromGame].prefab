@@ -56,3 +56,6 @@ MonoBehaviour:
   - tag: hitWallFX
     prefab: {fileID: 1649514149693448, guid: d519ad6ef8ea3cd4f9acf13f6646a601, type: 3}
     size: 20
+  - tag: damageFX
+    prefab: {fileID: 7029935051677475566, guid: f9a30636e894bad4d8039b9ac1de2619, type: 3}
+    size: 10
