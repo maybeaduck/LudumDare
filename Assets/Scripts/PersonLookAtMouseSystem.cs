@@ -15,8 +15,16 @@ namespace Zlodey
             
             foreach (var item in _activePersons)
             {
-                
+                ref var entity = ref _activePersons.GetEntity(item);
                 ref var person = ref _activePersons.Get1(item).Actor;
+                ref var direction = ref _activePersons.Get2(item).Direction;
+
+                if (entity.Has<Dash>())
+                {
+                    person.transform.rotation = Quaternion.LookRotation(-direction);
+                    return;
+                }
+                
                 var position = person.transform.position;
                 Plane plane = new Plane(Vector3.up,position + Vector3.up * _static.Visota);
                 Ray ray = _scene.Camera.ScreenPointToRay(Input.mousePosition);
