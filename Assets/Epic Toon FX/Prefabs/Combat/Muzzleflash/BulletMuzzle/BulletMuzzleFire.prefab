@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 497846}
   - component: {fileID: 19880796}
   - component: {fileID: 19901012}
-  - component: {fileID: 7660960367336996200}
   - component: {fileID: 3980224650042162736}
   m_Layer: 0
   m_Name: BulletMuzzleFire
@@ -4841,19 +4840,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &7660960367336996200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 152484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1899ac4fd2566b42b082328040d215c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TimeToDestroy: 0.5
 --- !u!114 &3980224650042162736
 MonoBehaviour:
   m_ObjectHideFlags: 0
