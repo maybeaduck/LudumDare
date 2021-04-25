@@ -29,6 +29,9 @@ namespace Zlodey
                         var damageFX = ObjectPoolController.Instance.SpawnFromPool("damageFX", transform.position, transform.rotation).GetComponent<PoolFX>();
                         damageFX.GetComponent<DamageFX>().SetValue(damage);
                         break;
+                    case "Player":
+                        ObjectPoolController.Instance.SpawnFromPool("hitPlayerFX", transform.position, transform.rotation).GetComponent<PoolFX>();
+                        break;
                     case "Wall":
                         ObjectPoolController.Instance.SpawnFromPool("hitWallFX", transform.position, transform.rotation).GetComponent<PoolFX>();
                         break;
