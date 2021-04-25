@@ -25,6 +25,18 @@ public class PlayerCharacter : MonoBehaviour
             playerPerson.ThisEntity.Get<DamageEvent>().Value = Random.Range(actorStatsComponent.Damage.MinValue,
                 actorStatsComponent.Damage.MaxValue);
         }
+
+        if (other.CompareTag("Heall"))
+        {
+            if (playerPerson.StatsComponent.Health.Value < 100f)
+            {
+                var bandageActor = other.GetComponent<BandageActor>();
+                bandageActor.Animator.SetBool("PickUp", true);
+                playerPerson.ThisEntity.Get<DamageEvent>().Value = bandageActor.HeallValue * -1;
+                bandageActor.HeallValue = 0;
+            }
+            
+        }
         
     }
 }
