@@ -135,7 +135,7 @@ namespace Zlodey
                 {
                     sceletons.meshAgent.SetDestination(_sceletonShoot.Get2(item).Actor.transform.position -
                                                        Vector3.back * _static.sceletonDistanceBackDistance);
-                    _rushers.Get3(item).Actor.Animator.SetBool("Run", false);
+                    // _rushers.Get3(item).Actor.Animator.SetBool("Run", false);
                 }
             }
         }
