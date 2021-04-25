@@ -30,7 +30,7 @@ namespace Zlodey
                         ref var shootPoint = ref weapon.ShootPoint;
                         entity.Get<ShootEvent>() = new ShootEvent(){Transform = shootPoint,Weapon = weapon,CountShoots = weapon.countShot};
 
-                        var cooldownTime = Config.BulletCooldownTime;
+                        var cooldownTime = weapon.shotsTime;
                         _time = Time.time + cooldownTime;
                         return;
                     }
