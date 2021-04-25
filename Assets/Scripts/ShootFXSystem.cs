@@ -14,7 +14,7 @@ namespace Zlodey
                 ref var transform = ref _shootFilter.Get1(item).Transform;
                 var shootFX = Config.ShootFX;
 
-                GameObject.Instantiate(shootFX, transform);
+                ObjectPoolController.Instance.SpawnFromPool("shootFX", transform.position, transform.rotation).GetComponent<PoolFX>();
             }
 
             foreach (var item in _hitFilter)
@@ -29,10 +29,10 @@ namespace Zlodey
                 switch (target.tag)
                 {
                     case "Enemy":
-                        GameObject.Instantiate(hitEnemyFX, transform.position, transform.rotation);
+                        ObjectPoolController.Instance.SpawnFromPool("hitEnemyFX", transform.position, transform.rotation).GetComponent<PoolFX>();
                         break;
                     case "Wall":
-                        GameObject.Instantiate(hitWallFX, transform.position, transform.rotation);
+                        ObjectPoolController.Instance.SpawnFromPool("hitWallFX", transform.position, transform.rotation).GetComponent<PoolFX>();
                         break;
                 }
 
