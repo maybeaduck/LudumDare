@@ -93,6 +93,9 @@ namespace Zlodey
         private EcsFilter<PlayerData, PersonData>.Exclude<DieFlag> _persons;
         private EcsFilter<RushersData, Stop> _stopRushers;
         private EcsFilter<RushersData, Return> _ReturnRushers;
+        private EcsFilter<ShootingSceletonData,PersonData>.Exclude<DieFlag> _sceletonShoot;
+        private StaticData _static;
+
         public void Run()
         {
             foreach (var item in _rushers)
@@ -114,6 +117,26 @@ namespace Zlodey
                 // _ReturnRushers.Get1(item).meshAgent.isStopped = false;
                 _ReturnRushers.GetEntity(item).Del<Stop>();
                 _ReturnRushers.GetEntity(item).Del<Return>();
+            }
+
+            foreach (var item in _sceletonShoot)
+            {
+                ref var sceletons = ref _sceletonShoot.Get1(item);
+                if (Vector3.Distance(_sceletonShoot.Get2(item).Actor.transform.position,
+                    _persons.GetEntity(Random.Range(0, _persons.GetEntitiesCount() - 1)).Get<PersonData>().Actor
+                        .transform.position) > _static.sceletonDistanceToPlayer)
+                {
+                    sceletons.meshAgent.SetDestination(_persons
+                        .GetEntity(Random.Range(0, _persons.GetEntitiesCount() - 1))
+                        .Get<PersonData>().Actor.transform.position);
+                    _rushers.Get3(item).Actor.Animator.SetBool("Run", true);
+                }
+                else
+                {
+                    sceletons.meshAgent.SetDestination(_sceletonShoot.Get2(item).Actor.transform.position -
+                                                       Vector3.back * _static.sceletonDistanceBackDistance);
+                    _rushers.Get3(item).Actor.Animator.SetBool("Run", false);
+                }
             }
         }
     }
@@ -153,6 +176,7 @@ namespace Zlodey
     internal class DieSystem : IEcsRunSystem
     {
         private EcsFilter<PersonData, CharacterStatsComponent, DieEvent> _die;
+        private EcsFilter<ShootingSceletonData, DieFlag> _dieShotingSceleton;
         private EcsFilter<PersonData, DieFlag> _owerDie;
         private EcsFilter<RushersData, DieFlag> _rushersDie;
         public void Run()
@@ -174,6 +198,11 @@ namespace Zlodey
                 _rushersDie.Get1(item).botFilter.enabled = false;
                 _rushersDie.Get1(item).AttackZone.enabled = false;
                 _rushersDie.Get1(item).meshAgent.Stop(true);
+            }
+
+            foreach (var item in _dieShotingSceleton)
+            {
+                _dieShotingSceleton.Get1(item).meshAgent.Stop(true);
             }
         }
     }

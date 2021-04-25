@@ -28,3 +28,5 @@ MonoBehaviour:
   HitWallFX: {fileID: 1649514149693448, guid: d519ad6ef8ea3cd4f9acf13f6646a601, type: 3}
   DashCooldownTime: 0.6
   DashSpeed: 16
+  sceletonDistanceToPlayer: 10
+  sceletonDistanceBackDistance: 8.9

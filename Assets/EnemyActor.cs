@@ -28,9 +28,17 @@ public class EnemyActor : MonoBehaviour
                 
                 actor.ThisEntity.Get<RushersData>() = new RushersData(){meshAgent = agent,botSpeed = botSpeed,botFilter = enemyBarrier,AttackZone = attackZone};
                 break;
+            case EnemyType.ShotingSceleton :
+                actor.ThisEntity.Get<ShootingSceletonData>() = new ShootingSceletonData() {meshAgent = agent};
+                break;
         }
     }
 
+}
+
+internal struct ShootingSceletonData
+{
+    public NavMeshAgent meshAgent;
 }
 
 internal struct EnemyData
