@@ -557,17 +557,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1052787433 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 395619286031645992, guid: ded7a15563c6af84e831dc0c67e26b00, type: 3}
-  m_PrefabInstance: {fileID: 7437849382280262493}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42e0f6cb52a584e40939cb918f129073, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1069080969
 GameObject:
   m_ObjectHideFlags: 0
@@ -1516,6 +1505,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 5.3
       objectReference: {fileID: 0}
+    - target: {fileID: 5574177477348541748, guid: 051b52352f630664aac1a73e5a828b86, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5934165206899752300, guid: 051b52352f630664aac1a73e5a828b86, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -1725,6 +1718,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 5.3
       objectReference: {fileID: 0}
+    - target: {fileID: 5574177477348541748, guid: 051b52352f630664aac1a73e5a828b86, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5934165206899752300, guid: 051b52352f630664aac1a73e5a828b86, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1807,26 +1804,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1396146795}
     m_Modifications:
-    - target: {fileID: 242795419135106560, guid: ded7a15563c6af84e831dc0c67e26b00, type: 3}
-      propertyPath: spread
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 242795419135106560, guid: ded7a15563c6af84e831dc0c67e26b00, type: 3}
-      propertyPath: reloadTime
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 242795419135106560, guid: ded7a15563c6af84e831dc0c67e26b00, type: 3}
-      propertyPath: AllAmunitionInInvent
-      value: 175
-      objectReference: {fileID: 0}
-    - target: {fileID: 242795419135106560, guid: ded7a15563c6af84e831dc0c67e26b00, type: 3}
-      propertyPath: DefaultAmunitionInInvent
-      value: 175
-      objectReference: {fileID: 0}
-    - target: {fileID: 395619286031645992, guid: ded7a15563c6af84e831dc0c67e26b00, type: 3}
-      propertyPath: Value
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 911860696417507714, guid: ded7a15563c6af84e831dc0c67e26b00, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1882,10 +1859,6 @@ PrefabInstance:
         by Humanoid clips.\n\tTransform 'mixamorig:RightHand'\n\tTransform 'mixamorig:RightForeArm'\n\tFrom
         animation clip 'Firing Rifle clone'"
       objectReference: {fileID: 0}
-    - target: {fileID: 5391813168258072715, guid: ded7a15563c6af84e831dc0c67e26b00, type: 3}
-      propertyPath: Damage
-      value: 
-      objectReference: {fileID: 1052787433}
     - target: {fileID: 6965687414749144989, guid: ded7a15563c6af84e831dc0c67e26b00, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
