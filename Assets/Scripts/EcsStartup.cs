@@ -107,6 +107,7 @@ namespace Zlodey
     {
         public NavMeshAgent meshAgent;
         public float botSpeed;
+        public Collider botFilter;
     }
 
     internal class LooseTriggerSystem : IEcsRunSystem
@@ -138,6 +139,7 @@ namespace Zlodey
                 personData.Actor.Animator.SetBool("Die",true);
                 personData.Actor.GetComponent<Collider>().enabled = false;
                 personData.Rigidbody.isKinematic = true;
+                
                 _die.GetEntity(item).Get<DieFlag>();
                 _die.GetEntity(item).Del<DieEvent>();
                 
@@ -145,6 +147,7 @@ namespace Zlodey
 
             foreach (var item in _rushersDie)
             {
+                _rushersDie.Get1(item).botFilter.enabled = false;
                 _rushersDie.Get1(item).meshAgent.Stop(true);
             }
         }

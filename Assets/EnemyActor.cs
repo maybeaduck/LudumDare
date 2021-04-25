@@ -15,6 +15,7 @@ public class EnemyActor : MonoBehaviour
     public NavMeshAgent agent;
     public float botSpeed;
     public Collider enemyBarrier;
+    public Collider Target;
         IEnumerator Start()
     {
         yield return null;
@@ -22,7 +23,7 @@ public class EnemyActor : MonoBehaviour
         switch (EnemyType)
         {
             case EnemyType.Rushers :
-                actor.ThisEntity.Get<RushersData>() = new RushersData(){meshAgent = agent,botSpeed = botSpeed};
+                actor.ThisEntity.Get<RushersData>() = new RushersData(){meshAgent = agent,botSpeed = botSpeed,botFilter = enemyBarrier};
                 break;
         }
     }
