@@ -10,6 +10,5 @@ public class PoolFX : MonoBehaviour, IPooledObject
 
     public void SetPool(Queue<GameObject> pool)
     {
-        Debug.Log("хдх нрячдю аюц суюдх");
     }
 }
