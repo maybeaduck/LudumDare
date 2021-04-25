@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Zlodey;
 using Leopotam.Ecs;
 using LeopotamGroup.Globals;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -103,7 +104,9 @@ namespace Zlodey
                     _boom.GetEntity(item).Get<BoomEvent>();
                     if (boom.BoomActor.BoomColider.radius < boom.BoomSize)
                     {
+                        
                         boom.BoomActor.BoomColider.radius += boom.BoomSize * Time.deltaTime * boom.BoomSpeed;
+                        
                     }
                     else
                     {
@@ -113,6 +116,7 @@ namespace Zlodey
                 }
 
             }
+            
         }
     }
 
