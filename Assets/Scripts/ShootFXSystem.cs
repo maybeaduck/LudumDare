@@ -7,6 +7,7 @@ namespace Zlodey
     {
         private EcsFilter<ShootEvent> _shootFilter;
         private EcsFilter<HitBulletEvent> _hitFilter;
+        private EcsFilter<BoomEvent> _boomFilter;
         public void Run()
         {
             foreach (var item in _shootFilter)
@@ -41,6 +42,17 @@ namespace Zlodey
                 }
 
                 entity.Del<HitBulletEvent>();
+            }
+
+            foreach (var item in _boomFilter)
+            {
+                ref var entity = ref _boomFilter.GetEntity(item);
+                ref var position = ref _boomFilter.Get1(item).Position;
+
+                ObjectPoolController.Instance.SpawnFromPool("boomFX", position, Quaternion.identity).GetComponent<PoolFX>();
+                Debug.Log("Boom!");
+
+                entity.Del<BoomEvent>();
             }
         }
     }

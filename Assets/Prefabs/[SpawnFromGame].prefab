@@ -46,7 +46,13 @@ MonoBehaviour:
   pools:
   - tag: bullet
     prefab: {fileID: 4903338428747141350, guid: 6f2b0b3fa8787f646bb02a429e415401, type: 3}
-    size: 50
+    size: 35
+  - tag: sniperBullet
+    prefab: {fileID: 4903338428747141350, guid: ba4c3d29dd9d2c84fb0d2674d18ed536, type: 3}
+    size: 10
+  - tag: bulletBoom
+    prefab: {fileID: 4903338428747141350, guid: a4e91bcb99f8fd64d9b2aec583e1a7d9, type: 3}
+    size: 7
   - tag: shootFX
     prefab: {fileID: 152484, guid: 23fc589b73077394db72d954703e8d1c, type: 3}
     size: 20
@@ -62,3 +68,6 @@ MonoBehaviour:
   - tag: hitPlayerFX
     prefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
     size: 20
+  - tag: boomFX
+    prefab: {fileID: 130346, guid: 07bf9ced87963e24299c2c2a22bfeeb6, type: 3}
+    size: 10

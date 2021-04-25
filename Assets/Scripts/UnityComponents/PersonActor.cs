@@ -42,15 +42,23 @@ public class PersonActor : MonoBehaviour
             ThisEntity.Get<DamageEvent>().Value += Random.Range(View.actor.Weapon.MinDamage,View.actor.Weapon.MaxDamage);
             _world.NewEntity().Get<HitBulletEvent>() = new HitBulletEvent()
             {
-                OnHitTransform = View.actor.transform,Target = this.gameObject,
+                OnHitTransform = View.actor.transform,
+                Target = this.gameObject,
                 DamageValue = Random.Range(View.actor.Weapon.MinDamage,View.actor.Weapon.MaxDamage)
             };
+
             if (!View.actor.SniperBullet)
             {
                 Debug.Log(" Я ТУПАЯ ПУЛЯ");
                 View.actor.gameObject.SetActive(false);    
             }
-            
+
+            if (View.actor.entity.Has<BoomFlag>())
+            {
+                Debug.Log(" Я ВЗРЫВНАЯ ПУЛЯ");
+                View.actor.entity.Get<BoomEvent>().Position = View.actor.transform.position;
+                View.actor.Rigidbody.velocity = Vector3.zero;
+            }
         }
     }
 }
