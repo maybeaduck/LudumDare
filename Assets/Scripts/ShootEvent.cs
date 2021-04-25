@@ -6,5 +6,6 @@ namespace Zlodey
     {
         public Transform Transform;
         public Weapon Weapon;
+        public int CountShoots;
     }
 }

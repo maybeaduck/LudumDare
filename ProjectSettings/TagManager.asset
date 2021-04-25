@@ -20,9 +20,9 @@ TagManager:
   - Monster
   - AttackZone
   - AttackCheckZone
-  - 
-  - 
-  - 
+  - Bullet
+  - SniperBullet
+  - Wall
   - 
   - 
   - 
@@ -46,4 +46,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: New Layer
+    uniqueID: 923522401
     locked: 0

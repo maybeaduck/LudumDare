@@ -920,6 +920,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1253779141149425626, guid: 6c1cc1cd0d81f9b46b05b31a72123ce4, type: 3}
+      propertyPath: pools.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1253779141149425626, guid: 6c1cc1cd0d81f9b46b05b31a72123ce4, type: 3}
+      propertyPath: pools.Array.data[6].tag
+      value: sniperBullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 1253779141149425626, guid: 6c1cc1cd0d81f9b46b05b31a72123ce4, type: 3}
+      propertyPath: pools.Array.data[6].size
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1253779141149425626, guid: 6c1cc1cd0d81f9b46b05b31a72123ce4, type: 3}
+      propertyPath: pools.Array.data[6].prefab
+      value: 
+      objectReference: {fileID: 4903338428747141350, guid: ba4c3d29dd9d2c84fb0d2674d18ed536, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1cc1cd0d81f9b46b05b31a72123ce4, type: 3}
 --- !u!1 &737929584
@@ -1959,7 +1975,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1475877403}
-  m_LocalRotation: {x: 0.000000019887326, y: 0.88167465, z: -0.47185794, w: 0.000000037159808}
+  m_LocalRotation: {x: -1.1872768e-16, y: 0.8816746, z: -0.47185794, w: -1.4499819e-15}
   m_LocalPosition: {x: 0, y: 15, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2687,7 +2703,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914029593}
-  m_LocalRotation: {x: 0.000000019887326, y: 0.88167465, z: -0.47185794, w: 0.000000037159808}
+  m_LocalRotation: {x: -1.1872768e-16, y: 0.8816746, z: -0.47185794, w: -1.4499819e-15}
   m_LocalPosition: {x: 0, y: 15, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -3572,8 +3588,48 @@ PrefabInstance:
       value: -0.048143394
       objectReference: {fileID: 0}
     - target: {fileID: 242795419135106560, guid: ded7a15563c6af84e831dc0c67e26b00, type: 3}
+      propertyPath: Damage
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 242795419135106560, guid: ded7a15563c6af84e831dc0c67e26b00, type: 3}
       propertyPath: spread
-      value: 3
+      value: 25.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 242795419135106560, guid: ded7a15563c6af84e831dc0c67e26b00, type: 3}
+      propertyPath: MaxDamage
+      value: 1.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 242795419135106560, guid: ded7a15563c6af84e831dc0c67e26b00, type: 3}
+      propertyPath: MinDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 242795419135106560, guid: ded7a15563c6af84e831dc0c67e26b00, type: 3}
+      propertyPath: countShot
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 242795419135106560, guid: ded7a15563c6af84e831dc0c67e26b00, type: 3}
+      propertyPath: BulletType
+      value: bullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 242795419135106560, guid: ded7a15563c6af84e831dc0c67e26b00, type: 3}
+      propertyPath: ammunition
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 242795419135106560, guid: ded7a15563c6af84e831dc0c67e26b00, type: 3}
+      propertyPath: reloadTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 242795419135106560, guid: ded7a15563c6af84e831dc0c67e26b00, type: 3}
+      propertyPath: defaultAmunition
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 242795419135106560, guid: ded7a15563c6af84e831dc0c67e26b00, type: 3}
+      propertyPath: AllAmunitionInInvent
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 242795419135106560, guid: ded7a15563c6af84e831dc0c67e26b00, type: 3}
+      propertyPath: DefaultAmunitionInInvent
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 395619286031645992, guid: ded7a15563c6af84e831dc0c67e26b00, type: 3}
       propertyPath: MaxValue
@@ -4790,6 +4846,10 @@ PrefabInstance:
     - target: {fileID: 7725352714013836953, guid: ded7a15563c6af84e831dc0c67e26b00, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.11135234
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186121650169459302, guid: ded7a15563c6af84e831dc0c67e26b00, type: 3}
+      propertyPath: m_Name
+      value: ShotGun
       objectReference: {fileID: 0}
     - target: {fileID: 8498057634040309740, guid: ded7a15563c6af84e831dc0c67e26b00, type: 3}
       propertyPath: m_LocalPosition.x

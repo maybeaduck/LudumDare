@@ -28,7 +28,7 @@ namespace Zlodey
                         weapon.ammunition--;
                         ref var entity = ref entityPlayer;
                         ref var shootPoint = ref weapon.ShootPoint;
-                        entity.Get<ShootEvent>() = new ShootEvent(){Transform = shootPoint,Weapon = weapon};
+                        entity.Get<ShootEvent>() = new ShootEvent(){Transform = shootPoint,Weapon = weapon,CountShoots = weapon.countShot};
 
                         var cooldownTime = Config.BulletCooldownTime;
                         _time = Time.time + cooldownTime;

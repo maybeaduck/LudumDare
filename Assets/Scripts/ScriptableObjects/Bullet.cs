@@ -9,6 +9,7 @@ namespace Zlodey
         public Rigidbody Rigidbody;
         public Weapon Weapon;
         public float LifeTime;
+        public bool SniperBullet;
         public void OnObjectSpawn()
         {
             

@@ -5,6 +5,7 @@ using Leopotam.Ecs;
 using LeopotamGroup.Globals;
 using UnityEngine;
 using Zlodey;
+using Random = UnityEngine.Random;
 
 public class PersonActor : MonoBehaviour
 {
@@ -33,15 +34,21 @@ public class PersonActor : MonoBehaviour
         
         if (other.CompareTag("Bullet"))
         {
+            Debug.Log("BulletsPOPALO " + gameObject.name);
             var View = other.GetComponent<ViewBullet>();
             
-            ThisEntity.Get<DamageEvent>() = new DamageEvent() { Value = View.actor.Weapon.Damage};
+            ThisEntity.Get<DamageEvent>().Value += Random.Range(View.actor.Weapon.MinDamage,View.actor.Weapon.MaxDamage);
             _world.NewEntity().Get<HitBulletEvent>() = new HitBulletEvent()
             {
                 OnHitTransform = View.actor.transform,Target = this.gameObject,
-                DamageValue = View.actor.Weapon.Damage
+                DamageValue = Random.Range(View.actor.Weapon.MinDamage,View.actor.Weapon.MaxDamage)
             };
-            View.actor.gameObject.SetActive(false);
+            if (!View.actor.SniperBullet)
+            {
+                Debug.Log(" Я ТУПАЯ ПУЛЯ");
+                View.actor.gameObject.SetActive(false);    
+            }
+            
         }
     }
 }
