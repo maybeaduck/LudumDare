@@ -10,7 +10,7 @@ public class DamageFX : MonoBehaviour
     
     public void SetValue(float value)
     {
-        Text.text = value.ToString();
+        Text.text = value.ToString("0.00");
         Animator.Play("DamageFXIn");
     }
 }

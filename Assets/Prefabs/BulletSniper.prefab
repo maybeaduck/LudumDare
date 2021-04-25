@@ -12,8 +12,10 @@ GameObject:
   - component: {fileID: 5424988435887484498}
   - component: {fileID: 1255219112621898370}
   - component: {fileID: 7466625307723418990}
+  - component: {fileID: 656456049249767065}
+  - component: {fileID: 5011166824804393042}
   m_Layer: 9
-  m_Name: Bullet
+  m_Name: BulletSniper
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49,6 +51,7 @@ MonoBehaviour:
   Rigidbody: {fileID: 1255219112621898370}
   Weapon: {fileID: 0}
   LifeTime: 0
+  SniperBullet: 1
 --- !u!54 &1255219112621898370
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -172,6 +175,32 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!135 &656456049249767065
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4903338428747141350}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.56
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5011166824804393042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4903338428747141350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07723d318a1416e478b6eaac4e9a5f9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actor: {fileID: 5424988435887484498}
 --- !u!1 &7756141227875890178
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,10 +212,8 @@ GameObject:
   - component: {fileID: 1267070798828322167}
   - component: {fileID: 6086132253210925665}
   - component: {fileID: 6725669450017930083}
-  - component: {fileID: 7735994264663746195}
-  - component: {fileID: 3998530034221169502}
   - component: {fileID: 4482403912104100502}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Sphere
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -257,32 +284,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &7735994264663746195
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7756141227875890178}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.56
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3998530034221169502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7756141227875890178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07723d318a1416e478b6eaac4e9a5f9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actor: {fileID: 5424988435887484498}
 --- !u!135 &4482403912104100502
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -305,7 +306,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 102768, guid: eecfd95aa06159440b824635d22e0f24, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 144206, guid: eecfd95aa06159440b824635d22e0f24, type: 3}
       propertyPath: m_Name
@@ -313,7 +314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 144206, guid: eecfd95aa06159440b824635d22e0f24, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 144206, guid: eecfd95aa06159440b824635d22e0f24, type: 3}
       propertyPath: m_IsActive
@@ -321,7 +322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 169336, guid: eecfd95aa06159440b824635d22e0f24, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 432696, guid: eecfd95aa06159440b824635d22e0f24, type: 3}
       propertyPath: m_RootOrder
