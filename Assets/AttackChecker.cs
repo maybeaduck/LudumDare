@@ -1,29 +1,28 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Leopotam.Ecs;
 using LeopotamGroup.Globals;
 using UnityEngine;
 
 public class AttackChecker : MonoBehaviour
 {
+    public AttackHand[] ActorHand;
 
-    public PersonActor PersonActor;
-    public EnemyActor EnemyActor;
-    private void OnTriggerEnter(Collider other)
+    public void ColliderEnable()
     {
-        if (other.CompareTag("Player"))
+        foreach (var item in ActorHand)
         {
-            PersonActor.Animator.SetTrigger("Punch");
-            EnemyActor.Target = other;
+            item.gameObject.SetActive(true);
         }
     }
-
-    private void OnTriggerExit(Collider other)
+    public void ColliderDisable()
     {
-        if (other.CompareTag("Player"))
+        foreach (var item in ActorHand)
         {
-            EnemyActor.Target = null;
+            item.gameObject.SetActive(false);
         }
     }
+    
 }
