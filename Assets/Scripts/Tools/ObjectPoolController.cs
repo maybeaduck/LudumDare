@@ -56,14 +56,14 @@ public class ObjectPoolController : MonoBehaviour
             Debug.LogWarning("Pool with tag "+ tag + " doesnt excist.");
             return null;
         }
-        Debug.Log(poolDictionary[tag].Count);
+        
         var queue = poolDictionary[tag];
         
         GameObject objectToSpawn = queue.Dequeue();
-        objectToSpawn.SetActive(true);
+        
         objectToSpawn.transform.position = position;
         objectToSpawn.transform.rotation = rotation;
-
+        objectToSpawn.SetActive(true);
         IPooledObject pooledObj = objectToSpawn.GetComponent<IPooledObject>();
 
         if (pooledObj != null)

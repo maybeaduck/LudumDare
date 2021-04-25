@@ -14435,7 +14435,7 @@ GameObject:
   - component: {fileID: 4844911575175084}
   - component: {fileID: 198441514564820928}
   - component: {fileID: 199455237020689502}
-  - component: {fileID: 4017613380405366605}
+  - component: {fileID: 2454536184200775839}
   m_Layer: 0
   m_Name: BulletDecalStone
   m_TagString: Untagged
@@ -19321,7 +19321,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &4017613380405366605
+--- !u!114 &2454536184200775839
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19333,3 +19333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1475e91d471d43b4aa7ec5e0ee1b5860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offai: 0
+  animator: {fileID: 0}
+  particleSystem: {fileID: 198441514564820928}
+  DamageFX: {fileID: 0}
