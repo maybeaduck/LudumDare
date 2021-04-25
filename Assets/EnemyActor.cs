@@ -18,18 +18,27 @@ public class EnemyActor : MonoBehaviour
     public float botSpeed;
     public Collider enemyBarrier;
     public Collider Target;
-        IEnumerator Start()
+    IEnumerator Start()
     {
         yield return null;
         actor.ThisEntity.Get<EnemyData>();
         switch (EnemyType)
         {
-            case EnemyType.Rushers :
-                
-                actor.ThisEntity.Get<RushersData>() = new RushersData(){meshAgent = agent,botSpeed = botSpeed,botFilter = enemyBarrier,AttackZone = attackZone};
+            case EnemyType.Rushers:
+
+                actor.ThisEntity.Get<RushersData>() = new RushersData()
+                {
+                    meshAgent = agent,
+                    botSpeed = botSpeed,
+                    botFilter = enemyBarrier,
+                    AttackZone = attackZone
+                };
                 break;
-            case EnemyType.ShotingSceleton :
-                actor.ThisEntity.Get<ShootingSceletonData>() = new ShootingSceletonData() {meshAgent = agent};
+            case EnemyType.ShotingSceleton:
+                actor.ThisEntity.Get<ShootingSceletonData>() = new ShootingSceletonData()
+                {
+                    meshAgent = agent
+                };
                 break;
         }
     }

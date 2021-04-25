@@ -31,6 +31,9 @@ namespace Zlodey
                         damageFX.DamageFX.SetValue(damage);
                         fx.particleSystem.Play();
                         break;
+                    case "Player":
+                        ObjectPoolController.Instance.SpawnFromPool("hitPlayerFX", transform.position, transform.rotation).GetComponent<PoolFX>();
+                        break;
                     case "Wall":
                         var fx2 =ObjectPoolController.Instance.SpawnFromPool("hitWallFX", transform.position, transform.rotation).GetComponent<PoolFX>();
                         fx2.particleSystem.Play();

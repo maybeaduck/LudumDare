@@ -13,6 +13,7 @@ namespace Zlodey
         public int ammunition;
         public int defaultAmunition;
         public float reloadTime;
+        public float shotsTime;
         public int AllAmunitionInInvent;
         public int DefaultAmunitionInInvent;
     }
