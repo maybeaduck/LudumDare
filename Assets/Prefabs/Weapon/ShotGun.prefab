@@ -76,14 +76,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShootPoint: {fileID: 1814870662841658682}
   WeaponModel: {fileID: 0}
+  bulletSpeed: 50
   MinDamage: 1
   MaxDamage: 1.63
   spread: 25.31
   ammunition: 7
   defaultAmunition: 7
-  reloadTime: 4
-  shotsTime: 0
+  reloadTime: 1.06
+  shotsTime: 0.52
   AllAmunitionInInvent: 42
   DefaultAmunitionInInvent: 42
-  countShot: 10
+  countShot: 7
   BulletType: bullet
+  MaxLiveTime: 2.38
+  BoomSize: 0
+  BoomSpeed: 0

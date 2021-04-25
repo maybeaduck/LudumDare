@@ -8,6 +8,7 @@ namespace Zlodey
     {
         public Transform ShootPoint;
         public Transform WeaponModel;
+        public float bulletSpeed;
         public float MinDamage;
         public float MaxDamage;
         public float spread;
@@ -19,5 +20,9 @@ namespace Zlodey
         public int DefaultAmunitionInInvent;
         public int countShot;
         public string BulletType;
+        public float MaxLiveTime;
+        public float BoomSize;
+        public float BoomSpeed;
+        
     }
 }

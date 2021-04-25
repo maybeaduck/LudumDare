@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Zlodey;
 using Leopotam.Ecs;
 using LeopotamGroup.Globals;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -48,6 +49,7 @@ namespace Zlodey
                 .Add(new LoseSystem())
                 .Add(new ShootingSystem())
                 .Add(new MoveBulletSystem())
+                .Add(new BulletEffectsSystem())
                 .Add(new ShootFXSystem())
                 .Add(new DashSystem())
 
@@ -85,6 +87,41 @@ namespace Zlodey
                 _world = null;
             }
         }
+    }
+
+    internal class BulletEffectsSystem : Injects,IEcsRunSystem
+    {
+        private EcsFilter<BulletData, BoomFlag> _boom;
+        public void Run()
+        {
+            foreach (var item in _boom)
+            {
+                ref var bullet = ref _boom.Get1(item);
+                ref var boom = ref _boom.Get2(item);
+                bullet.LiveTime += Time.deltaTime;
+                if (bullet.LiveTime >= bullet.MaxLiveTime)
+                {
+                    _boom.GetEntity(item).Get<BoomEvent>();
+                    if (boom.BoomActor.BoomColider.radius < boom.BoomSize)
+                    {
+                        
+                        boom.BoomActor.BoomColider.radius += boom.BoomSize * Time.deltaTime * boom.BoomSpeed;
+                        
+                    }
+                    else
+                    {
+                        bullet.Bullet.gameObject.SetActive(false);
+                        _boom.GetEntity(item).Destroy();
+                    }
+                }
+
+            }
+            
+        }
+    }
+
+    internal struct BoomEvent
+    {
     }
 
     internal class EnemyMoveSystem : IEcsRunSystem
@@ -231,7 +268,7 @@ namespace Zlodey
                 personData.Actor.Animator.SetBool("Die",true);
                 personData.Actor.GetComponent<Collider>().enabled = false;
                 personData.Rigidbody.isKinematic = true;
-                
+                personData.Actor.HealthBar.SetActive(false);
                 _die.GetEntity(item).Get<DieFlag>();
                 _die.GetEntity(item).Del<DieEvent>();
                 

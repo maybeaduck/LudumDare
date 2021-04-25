@@ -10,6 +10,9 @@ namespace Zlodey
         public Weapon Weapon;
         public float LifeTime;
         public bool SniperBullet;
+        public EcsEntity entity;
+        public BoomActor Boom;
+
         public void OnObjectSpawn()
         {
             
@@ -20,4 +23,6 @@ namespace Zlodey
             //Debug.Log("ИДИ ОТСЮДА БАГ УХАДИ");
         }
     }
+
+    
 }
