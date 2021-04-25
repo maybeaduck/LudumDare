@@ -7,7 +7,7 @@ namespace Zlodey
     {
         private EcsFilter<ShootEvent> _shootFilter;
         private EcsFilter<HitBulletEvent> _hitFilter;
-        private EcsFilter<BoomEvent> _boomFilter;
+        private EcsFilter<BoomEvent,BoomFlag,BulletData> _boomFilter;
         public void Run()
         {
             foreach (var item in _shootFilter)
@@ -48,12 +48,35 @@ namespace Zlodey
             {
                 ref var entity = ref _boomFilter.GetEntity(item);
                 ref var position = ref _boomFilter.Get1(item).Position;
-
-                ObjectPoolController.Instance.SpawnFromPool("boomFX", position, Quaternion.identity).GetComponent<PoolFX>();
-                Debug.Log("Boom!");
-
-                entity.Del<BoomEvent>();
+                ref var boom = ref _boomFilter.Get2(item);
+                ref var bullet = ref _boomFilter.Get3(item);
+                var BoomActor =ObjectPoolController.Instance.SpawnFromPool("boomFX", position, Quaternion.identity).GetComponent<PoolFX>();
+                
+                if (!entity.Has<BoomParticle>())
+                {
+                    Debug.Log("Boom!");
+                    BoomActor.particleSystem.Play();
+                    entity.Get<BoomParticle>();
+                }
+                
+                
+                if (boom.BoomActor.BoomColider.radius < boom.BoomSize)
+                {
+                    Debug.Log("BoomEvent1");
+                    boom.BoomActor.BoomColider.radius += boom.BoomSize * Time.deltaTime * boom.BoomSpeed;
+                }
+                else
+                {
+                    Debug.Log("BoomEvent2");
+                    bullet.Bullet.gameObject.SetActive(false);
+                    _boomFilter.GetEntity(item).Destroy();
+                }
+                
             }
         }
+    }
+
+    public struct BoomParticle
+    {
     }
 }

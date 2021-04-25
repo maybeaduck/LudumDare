@@ -9,6 +9,6 @@ public class BoomActor : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawSphere(transform.position,BoomColider.radius);
+        // Gizmos.DrawSphere(transform.position,BoomColider.radius);
     }
 }

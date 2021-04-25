@@ -8,11 +8,11 @@ namespace Zlodey
     {
         public Rigidbody Rigidbody;
         public Weapon Weapon;
-        public float LifeTime;
         public bool SniperBullet;
         public EcsEntity entity;
         public BoomActor Boom;
-
+        public float startSizeCollider;
+        public SphereCollider collider;
         public void OnObjectSpawn()
         {
             
@@ -21,6 +21,7 @@ namespace Zlodey
         public void SetPool(Queue<GameObject> pool)
         {
             //Debug.Log("ИДИ ОТСЮДА БАГ УХАДИ");
+            collider.radius = startSizeCollider;
         }
     }
 

@@ -53,6 +53,8 @@ MonoBehaviour:
   LifeTime: 0
   SniperBullet: 1
   Boom: {fileID: 0}
+  startSizeCollider: 0.56
+  collider: {fileID: 656456049249767065}
 --- !u!54 &1255219112621898370
 Rigidbody:
   m_ObjectHideFlags: 0
