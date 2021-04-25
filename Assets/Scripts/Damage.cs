@@ -4,6 +4,7 @@ namespace Zlodey
 {
     public class Damage : MonoBehaviour
     {
-        public float Value;
+        public float MaxValue;
+        public float MinValue;
     }
 }
