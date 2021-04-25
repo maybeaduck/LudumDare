@@ -49,6 +49,10 @@ MonoBehaviour:
   Rigidbody: {fileID: 1255219112621898370}
   Weapon: {fileID: 0}
   LifeTime: 0
+  SniperBullet: 0
+  Boom: {fileID: 0}
+  startSizeCollider: 0.56
+  collider: {fileID: 7735994264663746195}
 --- !u!54 &1255219112621898370
 Rigidbody:
   m_ObjectHideFlags: 0

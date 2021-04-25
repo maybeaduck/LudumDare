@@ -23,8 +23,8 @@ TagManager:
   - Bullet
   - SniperBullet
   - Wall
-  - 
-  - 
+  - BombBullet
+  - Player
   - 
   - 
   - 

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 656456049249767065}
   - component: {fileID: 5011166824804393042}
   - component: {fileID: 5710167226871312544}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: BulletBoom
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -54,6 +54,8 @@ MonoBehaviour:
   LifeTime: 0
   SniperBullet: 1
   Boom: {fileID: 5710167226871312544}
+  startSizeCollider: 0.38
+  collider: {fileID: 656456049249767065}
 --- !u!54 &1255219112621898370
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -188,7 +190,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.56
+  m_Radius: 0.38
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5011166824804393042
 MonoBehaviour:
