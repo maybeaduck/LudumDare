@@ -6,13 +6,15 @@ using UnityEngine.AI;
 using Zlodey;
 
 public enum EnemyType{
-    Rushers
+    Rushers,
+    ShotingSceleton
 }
 public class EnemyActor : MonoBehaviour
 {
     public PersonActor actor;
     public EnemyType EnemyType;
     public NavMeshAgent agent;
+    public Collider attackZone;
     public float botSpeed;
     public Collider enemyBarrier;
     public Collider Target;
@@ -23,7 +25,8 @@ public class EnemyActor : MonoBehaviour
         switch (EnemyType)
         {
             case EnemyType.Rushers :
-                actor.ThisEntity.Get<RushersData>() = new RushersData(){meshAgent = agent,botSpeed = botSpeed,botFilter = enemyBarrier};
+                
+                actor.ThisEntity.Get<RushersData>() = new RushersData(){meshAgent = agent,botSpeed = botSpeed,botFilter = enemyBarrier,AttackZone = attackZone};
                 break;
         }
     }

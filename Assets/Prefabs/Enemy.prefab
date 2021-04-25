@@ -43,8 +43,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.43278426, y: 0.43236375, z: 1.9699166}
-  m_Center: {x: 0.031145822, y: 0.21413063, z: -0.048729055}
+  m_Size: {x: 0.6900805, y: 0.6624967, z: 2.6374097}
+  m_Center: {x: 0.15979391, y: 0.32919675, z: 0.28501678}
 --- !u!114 &7231604237306982029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,6 +73,7 @@ MonoBehaviour:
   ActorHand:
   - {fileID: 3340825332704572219}
   - {fileID: 7231604237306982029}
+  Actor: {fileID: 5934165206899752306}
 --- !u!1 &2467464666153987634
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,10 +130,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 2.3
+  m_Radius: 1.3483937
   m_Height: 8.63
   m_Direction: 1
-  m_Center: {x: 0, y: 2.2, z: 2.21}
+  m_Center: {x: -0.000000039220126, y: 2.2000003, z: 1.258398}
 --- !u!1 &5886861099603694522
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,8 +177,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.7391065, z: 1.5336866}
-  m_Center: {x: -0.00000048698575, y: 0.13044655, z: -0.26684317}
+  m_Size: {x: 1.0871463, y: 1.0281681, z: 2.0201492}
+  m_Center: {x: 0.043572687, y: 0.15024854, z: -0.02361166}
 --- !u!114 &3340825332704572219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,7 +244,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5934165206899752301}
   serializedVersion: 2
-  m_Mass: 50.9
+  m_Mass: 23.9
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -305,8 +306,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42e0f6cb52a584e40939cb918f129073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxValue: 2
-  MinValue: 8
+  MaxValue: 5
+  MinValue: 10
 --- !u!114 &5934165206899752306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,7 +339,8 @@ MonoBehaviour:
   actor: {fileID: 5934165206899752306}
   EnemyType: 0
   agent: {fileID: 3683503157256475033}
-  botSpeed: 15
+  attackZone: {fileID: 4329074559537387165}
+  botSpeed: 10
   enemyBarrier: {fileID: 3985641058819855727}
   Target: {fileID: 0}
 --- !u!195 &3683503157256475033
@@ -351,11 +353,11 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 9.5
+  m_Speed: 7.1
   m_Acceleration: 260.1
   avoidancePriority: 50
   m_AngularSpeed: 320.85
-  m_StoppingDistance: 1.33
+  m_StoppingDistance: 2.78
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -953,7 +955,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2128443620784389358, guid: 2146b28c352554f45a64491232bba855, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 3.8
+      value: 5.27
       objectReference: {fileID: 0}
     - target: {fileID: 2128443620784389358, guid: 2146b28c352554f45a64491232bba855, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
