@@ -18,4 +18,12 @@ public class AttackChecker : MonoBehaviour
             EnemyActor.Target = other;
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            EnemyActor.Target = null;
+        }
+    }
 }
