@@ -27,4 +27,4 @@ MonoBehaviour:
   HitEnemyFX: {fileID: 160684, guid: de85f8f81ea29ea479250adb36debd92, type: 3}
   HitWallFX: {fileID: 1649514149693448, guid: d519ad6ef8ea3cd4f9acf13f6646a601, type: 3}
   DashCooldownTime: 0.6
-  DashSpeed: 1000
+  DashSpeed: 16

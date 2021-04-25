@@ -5,11 +5,12 @@ using System.Linq;
 using Leopotam.Ecs;
 using LeopotamGroup.Globals;
 using UnityEngine;
+using Zlodey;
 
 public class AttackChecker : MonoBehaviour
 {
     public AttackHand[] ActorHand;
-
+    public PersonActor Actor;
     public void ColliderEnable()
     {
         foreach (var item in ActorHand)
@@ -23,6 +24,16 @@ public class AttackChecker : MonoBehaviour
         {
             item.gameObject.SetActive(false);
         }
+    }
+
+    public void Stop()
+    {
+        Actor.ThisEntity.Get<Stop>();
+    }
+
+    public void Resume()
+    {
+        Actor.ThisEntity.Get<Return>();
     }
     
 }

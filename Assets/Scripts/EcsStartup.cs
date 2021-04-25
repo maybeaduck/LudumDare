@@ -91,6 +91,8 @@ namespace Zlodey
     {
         private EcsFilter<RushersData, EnemyData,PersonData>.Exclude<DieFlag> _rushers;
         private EcsFilter<PlayerData, PersonData>.Exclude<DieFlag> _persons;
+        private EcsFilter<RushersData, Stop> _stopRushers;
+        private EcsFilter<RushersData, Return> _ReturnRushers;
         public void Run()
         {
             foreach (var item in _rushers)
@@ -100,8 +102,28 @@ namespace Zlodey
                     .Get<PersonData>().Actor.transform.position);
                 _rushers.Get3(item).Actor.Animator.SetBool("Run",true);
             }
-            
+
+            foreach (var item in _stopRushers)
+            {
+                _stopRushers.Get1(item).meshAgent.Stop(true);
+                
+            }
+
+            foreach (var item in _ReturnRushers)
+            {
+                // _ReturnRushers.Get1(item).meshAgent.isStopped = false;
+                _ReturnRushers.GetEntity(item).Del<Stop>();
+                _ReturnRushers.GetEntity(item).Del<Return>();
+            }
         }
+    }
+
+    internal struct Return
+    {
+    }
+
+    internal struct Stop
+    {
     }
 
     internal struct RushersData
@@ -109,6 +131,7 @@ namespace Zlodey
         public NavMeshAgent meshAgent;
         public float botSpeed;
         public Collider botFilter;
+        public Collider AttackZone;
     }
 
     internal class LooseTriggerSystem : IEcsRunSystem
@@ -149,6 +172,7 @@ namespace Zlodey
             foreach (var item in _rushersDie)
             {
                 _rushersDie.Get1(item).botFilter.enabled = false;
+                _rushersDie.Get1(item).AttackZone.enabled = false;
                 _rushersDie.Get1(item).meshAgent.Stop(true);
             }
         }
