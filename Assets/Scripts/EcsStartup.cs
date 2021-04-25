@@ -49,6 +49,8 @@ namespace Zlodey
                 .Add(new ShootingSystem())
                 .Add(new MoveBulletSystem())
                 .Add(new ShootFXSystem())
+                .Add(new DashSystem())
+                .Add(new PersonUpdateSpeedSystem())
 
                 .OneFrame<ShootEvent>()
 

@@ -14,6 +14,8 @@ namespace Zlodey
             {
                 ref var weapon = ref _filter.Get1(item).Weapon;
                 ref var entityPlayer = ref _filter.GetEntity(item);
+                if (entityPlayer.Has<Dash>()) return;
+
                 if (Input.GetKeyDown(KeyCode.R))
                 {
                     entityPlayer.Get<Reload>();
