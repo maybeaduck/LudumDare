@@ -8,12 +8,11 @@ namespace Zlodey
         private EcsFilter<PersonData,PlayerData>.Exclude<StandFlag,DieFlag> _activePersons;
         public void Run()
         {
-
             foreach (var item in _activePersons)
             {
                 ref var person = ref _activePersons.Get1(item).Actor;
                 ref var rigidbody = ref _activePersons.Get1(item).Rigidbody;
-                var speed = Config.speed;
+                ref var speed = ref _activePersons.Get2(item).Speed;
                 var normalDirection = new Vector3(
                     Input.GetAxis("Horizontal"),
                     0,
@@ -24,8 +23,6 @@ namespace Zlodey
                 
                 var isRun = normalDirection.magnitude > 1 ? true : false;
                 person.Animator.SetBool("Run", isRun);
-
-
             }
         }
     }

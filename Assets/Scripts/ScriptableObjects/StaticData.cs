@@ -26,5 +26,9 @@ namespace Zlodey
         public GameObject ShootFX;
         public GameObject HitEnemyFX;
         public GameObject HitWallFX;
+
+        [Header("Dash")]
+        public float DashCooldownTime;
+        public float DashSpeed;
     }
 }

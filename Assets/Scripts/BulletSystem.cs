@@ -17,8 +17,10 @@ namespace Zlodey
                 
                 var bullet = ObjectPoolController.Instance.SpawnFromPool("bullet",transform.position,transform.rotation).GetComponent<Bullet>();
                 bullet.Weapon = weapon;
-                // bullet.transform.localEulerAngles += new Vector3(Random.Range(-bullet.Weapon.spread, bullet.Weapon.spread),
-                //     0, Random.Range(-bullet.Weapon.spread, bullet.Weapon.spread));
+
+                bullet.transform.localEulerAngles += new Vector3(Random.Range(-bullet.Weapon.spread, bullet.Weapon.spread),
+                    0, Random.Range(-bullet.Weapon.spread, bullet.Weapon.spread));
+
                 var direction = (bullet.transform.forward  ) * speed;
                 
                 
