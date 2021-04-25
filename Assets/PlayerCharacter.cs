@@ -37,7 +37,14 @@ public class PlayerCharacter : MonoBehaviour
             }
             
         }
-        
+
+        if (other.CompareTag("Ammo"))
+        {
+            var ammoActor = other.GetComponent<AmmoActor>();
+            ammoActor.Animator.SetBool("PickUp",true);
+            playerPerson.Weapon.AllAmunitionInInvent += playerPerson.Weapon.defaultAmunition* ammoActor.CountAmmoPack;
+            ammoActor.CountAmmoPack = 0;
+        }
     }
 }
 

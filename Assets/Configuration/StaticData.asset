@@ -22,7 +22,7 @@ MonoBehaviour:
   Bullet: {fileID: 5424988435887484498, guid: 6f2b0b3fa8787f646bb02a429e415401, type: 3}
   BulletSpeed: 60.1
   BulletCooldownTime: 0.2
-  Visota: 0.1
+  Visota: 3
   ShootFX: {fileID: 152484, guid: 23fc589b73077394db72d954703e8d1c, type: 3}
   HitEnemyFX: {fileID: 160684, guid: de85f8f81ea29ea479250adb36debd92, type: 3}
   HitWallFX: {fileID: 1649514149693448, guid: d519ad6ef8ea3cd4f9acf13f6646a601, type: 3}

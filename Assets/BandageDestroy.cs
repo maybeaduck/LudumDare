@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class BandageDestroy : MonoBehaviour
 {
-    public BandageActor actor;
+    public GameObject actor;
     public void Destroy()
     {
-        Destroy(actor.gameObject);
+        Destroy(actor);
     }
 }

@@ -6516,7 +6516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4cbe9352056a67478325da026d647e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value: 100
+  Value: 50
   HealthSlider: {fileID: 1586601431709041899}
 --- !u!136 &3050187943768916604
 CapsuleCollider:
@@ -6989,8 +6989,36 @@ PrefabInstance:
     m_TransformParent: {fileID: 5909820344212283041}
     m_Modifications:
     - target: {fileID: 1705170506918987032, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
+      propertyPath: Damage
+      value: 7.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705170506918987032, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
+      propertyPath: spread
+      value: 12.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705170506918987032, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
       propertyPath: shotsTime
-      value: 1
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705170506918987032, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
+      propertyPath: ammunition
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705170506918987032, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
+      propertyPath: reloadTime
+      value: 2.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705170506918987032, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
+      propertyPath: defaultAmunition
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705170506918987032, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
+      propertyPath: AllAmunitionInInvent
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705170506918987032, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
+      propertyPath: DefaultAmunitionInInvent
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5872663735295046271, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
       propertyPath: m_LocalPosition.x
