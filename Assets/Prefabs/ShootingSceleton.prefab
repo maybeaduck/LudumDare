@@ -6447,6 +6447,7 @@ MonoBehaviour:
   Rigidbody: {fileID: 7724177656877771749}
   StatsComponent: {fileID: 2367542214381624169}
   Weapon: {fileID: 3311532927377867335}
+  HealthBar: {fileID: 8009610373866266440}
 --- !u!114 &3347645407408180095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6890,6 +6891,11 @@ PrefabInstance:
 --- !u!224 &1378456276506509640 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2128443620784389358, guid: 2146b28c352554f45a64491232bba855, type: 3}
+  m_PrefabInstance: {fileID: 1056237719930846630}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8009610373866266440 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7029935051677475566, guid: 2146b28c352554f45a64491232bba855, type: 3}
   m_PrefabInstance: {fileID: 1056237719930846630}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1586601431709041899 stripped

@@ -16,6 +16,8 @@ public class PersonActor : MonoBehaviour
     public Weapon Weapon;
 
     private EcsWorld _world;
+    public GameObject HealthBar;
+
     void Start()
     {
         _world = Service<EcsWorld>.Get();
