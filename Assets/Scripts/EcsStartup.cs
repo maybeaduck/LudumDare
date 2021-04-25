@@ -98,31 +98,34 @@ namespace Zlodey
             {
                 ref var bullet = ref _boom.Get1(item);
                 ref var boom = ref _boom.Get2(item);
+
                 bullet.LiveTime += Time.deltaTime;
                 if (bullet.LiveTime >= bullet.MaxLiveTime)
                 {
-                    _boom.GetEntity(item).Get<BoomEvent>();
+                    Debug.Log("BoomEvent");
+                    _boom.GetEntity(item).Get<BoomEvent>().Position = bullet.Bullet.transform.position;
                     if (boom.BoomActor.BoomColider.radius < boom.BoomSize)
                     {
-                        
+                        Debug.Log("BoomEvent1");
                         boom.BoomActor.BoomColider.radius += boom.BoomSize * Time.deltaTime * boom.BoomSpeed;
-                        
                     }
                     else
                     {
+                        Debug.Log("BoomEvent2");
                         bullet.Bullet.gameObject.SetActive(false);
                         _boom.GetEntity(item).Destroy();
                     }
                 }
 
             }
-            
         }
     }
 
     internal struct BoomEvent
     {
+        public Vector3 Position;
     }
+
 
     internal class EnemyMoveSystem : IEcsRunSystem
     {
