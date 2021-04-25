@@ -16,7 +16,7 @@ MonoBehaviour:
   ObjectPooler: {fileID: 6188418137672102728, guid: 768949f21594f2441a8554e3df35a506, type: 3}
   AudioSourcePrefab: {fileID: 5699235332874451145, guid: 87971207893c17340bb695b0e5d7a0f1, type: 3}
   UIPrefab: {fileID: 7691685437204089913, guid: 6f8dd4d19d855b541a176a362c49f4f2, type: 3}
-  speed: 12
+  speed: 10
   speedRotation: 10
   TestDamage: 10
   Bullet: {fileID: 5424988435887484498, guid: 6f2b0b3fa8787f646bb02a429e415401, type: 3}
@@ -27,4 +27,4 @@ MonoBehaviour:
   HitEnemyFX: {fileID: 160684, guid: de85f8f81ea29ea479250adb36debd92, type: 3}
   HitWallFX: {fileID: 1649514149693448, guid: d519ad6ef8ea3cd4f9acf13f6646a601, type: 3}
   DashCooldownTime: 0.6
-  DashSpeed: 15
+  DashSpeed: 1000

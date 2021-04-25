@@ -17,11 +17,9 @@ namespace Zlodey
             {
                 ref var entity = ref _activePersons.GetEntity(item);
                 ref var person = ref _activePersons.Get1(item).Actor;
-                ref var direction = ref _activePersons.Get2(item).Direction;
 
                 if (entity.Has<Dash>())
                 {
-                    person.transform.rotation = Quaternion.LookRotation(-direction);
                     return;
                 }
                 

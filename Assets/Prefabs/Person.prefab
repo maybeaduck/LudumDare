@@ -133,6 +133,7 @@ MonoBehaviour:
   Rigidbody: {fileID: 6947446684885905765}
   StatsComponent: {fileID: 5391813168258072715}
   Weapon: {fileID: 242795419135106560}
+  Collider: {fileID: 7086961146088335722}
 --- !u!114 &7446812095289364390
 MonoBehaviour:
   m_ObjectHideFlags: 0
