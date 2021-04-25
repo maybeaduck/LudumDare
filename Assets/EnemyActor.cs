@@ -14,6 +14,7 @@ public class EnemyActor : MonoBehaviour
     public EnemyType EnemyType;
     public NavMeshAgent agent;
     public float botSpeed;
+    public Collider enemyBarrier;
         IEnumerator Start()
     {
         yield return null;

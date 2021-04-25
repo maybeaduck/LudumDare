@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: {fileID: 7446812095289364390}
-  Damage: {fileID: 0}
+  Damage: {fileID: 395619286031645992}
 --- !u!114 &395619286031645992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42e0f6cb52a584e40939cb918f129073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value: 0
+  Value: 10
 --- !u!114 &1052787438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,9 +209,41 @@ PrefabInstance:
     m_TransformParent: {fileID: 7437849382074273648}
     m_Modifications:
     - target: {fileID: 1705170506918987032, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
+      propertyPath: spread
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705170506918987032, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
       propertyPath: ShootPoint
       value: 
-      objectReference: {fileID: 1795148702794042619}
+      objectReference: {fileID: 5010406465951148391}
+    - target: {fileID: 1705170506918987032, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
+      propertyPath: reloadTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705170506918987032, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
+      propertyPath: WeaponModel
+      value: 
+      objectReference: {fileID: 4777323359957357411}
+    - target: {fileID: 1705170506918987032, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
+      propertyPath: AllAmunitionInInvent
+      value: 175
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705170506918987032, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
+      propertyPath: DefaultAmunitionInInvent
+      value: 175
+      objectReference: {fileID: 0}
+    - target: {fileID: 5872663735295046271, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.666
+      objectReference: {fileID: 0}
+    - target: {fileID: 5872663735295046271, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.057
+      objectReference: {fileID: 0}
+    - target: {fileID: 5872663735295046271, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.835
+      objectReference: {fileID: 0}
     - target: {fileID: 6081985751089329776, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -230,7 +262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6081985751089329776, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6081985751089329776, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
       propertyPath: m_LocalPosition.y
@@ -290,6 +322,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bdd2e2e90bfc094ca82e2651beafd10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &5010406465951148391 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5872663735295046271, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
+  m_PrefabInstance: {fileID: 1510797898386955032}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5279728510539072297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -608,6 +645,13 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 278a72ea15d41f245a7164e9597397ae, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 038294dac56d2d646941989b50086ee0, type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'mixamorig:RightHand'\n\tTransform 'mixamorig:RightForeArm'\n\tFrom
+        animation clip 'Firing Rifle clone'"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 038294dac56d2d646941989b50086ee0, type: 3}
 --- !u!4 &8606793926945656936 stripped
