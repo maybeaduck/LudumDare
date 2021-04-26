@@ -30,3 +30,6 @@ MonoBehaviour:
   DashSpeed: 16
   sceletonDistanceToPlayer: 10
   sceletonDistanceBackDistance: 8
+  allWeapons:
+  - {fileID: 2044196200, guid: ab793bd0de8f9ca46bf6bdabb9a4ad89, type: 3}
+  - {fileID: 4969837420842652905, guid: bf7b9f6769fb5534cbe40274d3d0d95c, type: 3}
