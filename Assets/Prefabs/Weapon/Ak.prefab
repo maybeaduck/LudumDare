@@ -74,6 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bdd2e2e90bfc094ca82e2651beafd10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WeaponType: 1
   ShootPoint: {fileID: 5872663735295046271}
   WeaponModel: {fileID: 0}
   bulletSpeed: 60
@@ -84,8 +85,8 @@ MonoBehaviour:
   defaultAmunition: 30
   reloadTime: 2.5
   shotsTime: 0.1
-  AllAmunitionInInvent: 60
-  DefaultAmunitionInInvent: 60
+  AllAmunitionInInvent: 90
+  DefaultAmunitionInInvent: 90
   countShot: 1
   BulletType: bullet
   MaxLiveTime: 1

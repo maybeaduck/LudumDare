@@ -51,51 +51,51 @@ namespace Zlodey
     }
     public class WeaponUIUpdateSystem : Injects, IEcsRunSystem
     {
-        private EcsFilter<PersonData> _person;
+        private EcsFilter<PersonData,PlayerData> _person;
         public void Run()
         {
             foreach (var item in _person)
             {
                 ref var weapon = ref _person.Get1(item).Weapon;
-
+                
                 if (!weapon) return;
-
-                Sprite sprite;
-                    switch (weapon.name)
+                Debug.Log(weapon.WeaponType);
+                Sprite sprite = _staticData.SniperGunSprite;
+                    switch (weapon.WeaponType)
                     {
-                        case "Ak":
+                        case WeaponType.Ak:
                             sprite = _staticData.AkSprite;
                             break;
-                        case "BombGun":
+                        case WeaponType.BombGun:
                             sprite = _staticData.BombGunSprite;
                             break;
-                        case "DesertEagle":
+                        case WeaponType.DesertEagle:
                             sprite = _staticData.DesertEagleSprite;
                             break;
-                        case "FireGun":
+                        case WeaponType.FireGun:
                             sprite = _staticData.FireGunSprite;
                             break;
-                        case "FiveSeven":
+                        case WeaponType.FiveSeven:
                             sprite = _staticData.FiveSevenSprite;
                             break;
-                        case "MashinePistol":
+                        case WeaponType.MashineGun:
                             sprite = _staticData.MashinePistolSprite;
                             break;
-                        case "ShotGun":
+                        case WeaponType.ShotGun:
                             sprite = _staticData.ShotGunSprite;
                             break;
-                        case "SniperGun":
+                        case WeaponType.Sniper:
                             sprite = _staticData.SniperGunSprite;
                             break;
 
-                        default:
+                        case WeaponType.Weapon:
                             sprite = _staticData.SniperGunSprite;
                             break;
                     }
 
                     _ui.WaveScreen.WeaponImage.sprite = sprite;
                     _ui.WaveScreen.AammoValue.text = weapon.ammunition.ToString();
-                    _ui.WaveScreen.AmmoValueMax.text = weapon.defaultAmunition.ToString();
+                    _ui.WaveScreen.AmmoValueMax.text = weapon.AllAmunitionInInvent.ToString();
                 
             }
         }

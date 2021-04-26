@@ -2,10 +2,23 @@
 using LeopotamGroup.Globals;
 using UnityEngine;
 
+public enum WeaponType
+{
+    Weapon,
+    Ak,
+    Sniper,
+    FiveSeven,
+    FireGun,
+    DesertEagle,
+    MashineGun,
+    BombGun,
+    ShotGun
+}
 namespace Zlodey
 {
     public class Weapon : MonoBehaviour
     {
+        public WeaponType WeaponType;
         public Transform ShootPoint;
         public Transform WeaponModel;
         public float bulletSpeed;
