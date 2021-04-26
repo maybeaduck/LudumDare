@@ -44,7 +44,7 @@ namespace Zlodey
                     }
 
                     var toDrop = dropItemRoll[Random.Range(0, dropItemRoll.Count - 1)].DropItem;
-                    GameObject.Instantiate(toDrop, personData.Actor.transform.position, Quaternion.identity);
+                    GameObject.Instantiate(toDrop, personData.Actor.transform.position + Vector3.up *1.5f, Quaternion.identity);
 
                 }
                 _die.GetEntity(item).Get<DieFlag>();

@@ -92,11 +92,20 @@ namespace Zlodey
                             sprite = _staticData.SniperGunSprite;
                             break;
                     }
-
-                    _ui.WaveScreen.WeaponImage.sprite = sprite;
-                    _ui.WaveScreen.AammoValue.text = weapon.ammunition.ToString();
-                    _ui.WaveScreen.AmmoValueMax.text = weapon.AllAmunitionInInvent.ToString();
                 
+                    _ui.WaveScreen.WeaponImage.sprite = sprite;
+                    if (weapon.AllAmunitionInInvent != -1)
+                    {
+                        _ui.WaveScreen.AammoValue.text = weapon.ammunition.ToString();
+                        _ui.WaveScreen.AmmoValueMax.text = weapon.AllAmunitionInInvent.ToString();    
+                    }
+                    else
+                    {
+                        _ui.WaveScreen.AammoValue.text = weapon.ammunition.ToString();
+                        _ui.WaveScreen.AmmoValueMax.text = "inf";    
+                    }
+
+
             }
         }
     }

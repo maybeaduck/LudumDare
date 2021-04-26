@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Object = UnityEngine.Object;
 
 namespace Zlodey
 {
@@ -62,6 +63,7 @@ namespace Zlodey
         public Sprite MashinePistolSprite;
         public Sprite ShotGunSprite;
         public Sprite SniperGunSprite;
+        public GameObject DeffaultPistol;
     }
     [Serializable]
     public class drop

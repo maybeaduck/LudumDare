@@ -51,6 +51,7 @@ namespace Zlodey
                 .Add(new BulletEffectsSystem())
                 .Add(new ShootFXSystem())
                 .Add(new DashSystem())
+                .Add(new DefaultPistol())
                 .Add(new RemoveSystem())
                 .Add(new CheckDeadEnemiesSystem())
                 .Add(new WaveSystem())
@@ -98,6 +99,23 @@ namespace Zlodey
         }
     }
 
+    internal class DefaultPistol : Injects, IEcsRunSystem
+    {
+        private EcsFilter<PersonData, PlayerData> _players;
+        public void Run()
+        {
+            foreach (var item in _players)
+            {
+                ref var weapon = ref _players.Get1(item).Weapon;
+                if (weapon.AllAmunitionInInvent == 0 && weapon.ammunition == 0)
+                {
+                    GameObject.Instantiate(_staticData.DeffaultPistol, _players.Get1(item).Actor.transform.position,
+                        Quaternion.identity);
+                }
+            }
+        }
+    }
+
     internal class RemoveSystem : Injects,IEcsRunSystem
     {
         private EcsFilter<DropData> _dropData;
@@ -107,7 +125,7 @@ namespace Zlodey
             foreach (var item in _dropData)
             {
                 ref var drop = ref _dropData.Get1(item);
-                if (drop.weapon.AllAmunitionInInvent == 0 && drop.weapon.ammunition == 0)
+                if (drop.weapon.AllAmunitionInInvent == 0 && drop.weapon.ammunition == 0 || drop.weapon.AllAmunitionInInvent == -1)
                 {
                     drop.time += Time.deltaTime;
                     
