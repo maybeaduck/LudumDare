@@ -14,9 +14,11 @@ public class PersonActor : MonoBehaviour
     public Rigidbody Rigidbody;
     public CharacterStats StatsComponent;
     public Weapon Weapon;
-
+    [Range(0,1)]
+    public float ChanceDropItem;
     private EcsWorld _world;
     public GameObject HealthBar;
+    public float DestroyTrup;
 
     void Start()
     {

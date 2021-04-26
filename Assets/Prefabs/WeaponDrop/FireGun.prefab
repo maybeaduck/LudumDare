@@ -45,10 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b65ae013bc9642747be7bbeffdeab795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponModel: {fileID: 100000, guid: 2f85f6620a7ce904faf23d8c70c70a82, type: 3}
+  WeaponModel: {fileID: 100000, guid: 7a4719df0f823be41909f6e03a65e9f6, type: 3}
   WeaponIndex: 5
   Animator: {fileID: 5635825741822329941}
-  WeaponScript: {fileID: 1705170506918987032, guid: c19244951808f984ba00e8ec589ea359, type: 3}
+  WeaponScript: {fileID: 1705170506918987032, guid: a4aeab22858655846b90198b8e6dfe59, type: 3}
   itsPickUp: 0
 --- !u!65 &3158697989357463171
 BoxCollider:

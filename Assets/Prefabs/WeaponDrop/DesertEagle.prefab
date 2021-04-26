@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5503342570614946486}
   - component: {fileID: 5503342570614946489}
   m_Layer: 0
-  m_Name: DesertEagle 1
+  m_Name: DesertEagle
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b65ae013bc9642747be7bbeffdeab795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponModel: {fileID: 100000, guid: 2f85f6620a7ce904faf23d8c70c70a82, type: 3}
+  WeaponModel: {fileID: 100000, guid: 7c59f5f87a5404442881cc3273e91949, type: 3}
   WeaponIndex: 4
   Animator: {fileID: 3007356011926198383}
   WeaponScript: {fileID: 1705170506918987032, guid: 43d33366a3352d24f9da362473116cf0, type: 3}

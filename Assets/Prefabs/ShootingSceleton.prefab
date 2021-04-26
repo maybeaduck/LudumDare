@@ -6447,7 +6447,9 @@ MonoBehaviour:
   Rigidbody: {fileID: 7724177656877771749}
   StatsComponent: {fileID: 2367542214381624169}
   Weapon: {fileID: 3311532927377867335}
+  ChanceDropItem: 0.411
   HealthBar: {fileID: 8009610373866266440}
+  DestroyTrup: 0
 --- !u!114 &3347645407408180095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7000,7 +7002,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1705170506918987032, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
       propertyPath: spread
-      value: 12.28
+      value: 27.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705170506918987032, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
+      propertyPath: MaxDamage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705170506918987032, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
+      propertyPath: MinDamage
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1705170506918987032, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
       propertyPath: shotsTime
@@ -7008,7 +7018,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1705170506918987032, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
       propertyPath: ammunition
-      value: 15
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1705170506918987032, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
       propertyPath: reloadTime
@@ -7016,15 +7026,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1705170506918987032, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
       propertyPath: defaultAmunition
-      value: 15
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1705170506918987032, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
       propertyPath: AllAmunitionInInvent
-      value: 100
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 1705170506918987032, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
       propertyPath: DefaultAmunitionInInvent
-      value: 100
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 5872663735295046271, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
       propertyPath: m_LocalPosition.x

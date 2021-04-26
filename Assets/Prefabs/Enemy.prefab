@@ -324,7 +324,9 @@ MonoBehaviour:
   Rigidbody: {fileID: 6127330605602325369}
   StatsComponent: {fileID: 9201274918695826071}
   Weapon: {fileID: 0}
+  ChanceDropItem: 0.253
   HealthBar: {fileID: 4071346299503752908}
+  DestroyTrup: 15
 --- !u!114 &5934165206899752305
 MonoBehaviour:
   m_ObjectHideFlags: 0

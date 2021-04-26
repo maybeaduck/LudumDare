@@ -13,25 +13,25 @@ namespace Zlodey
 
         public void Init()
         {
-            var timeToNextWave = Config.TimeToNextWave;
+            var timeToNextWave = _staticData.TimeToNextWave;
             _time = timeToNextWave + Time.time;
 
-            _floor = Config.StartFloor;
-            UI.WaveScreen.FloorNumber.text = _floor.ToString();
+            _floor = _staticData.StartFloor;
+            _ui.WaveScreen.FloorNumber.text = _floor.ToString();
 
             UpdateTimer();
         }
 
         public void Run()
         {
-            var timeToNextWave = Config.TimeToNextWave;
+            var timeToNextWave = _staticData.TimeToNextWave;
 
             foreach (var item in _filter)
             {
                 _time = timeToNextWave + Time.time;
 
                 _floor++;
-                UI.WaveScreen.FloorNumber.text = _floor.ToString();
+                _ui.WaveScreen.FloorNumber.text = _floor.ToString();
             }
 
             UpdateTimer();
@@ -42,15 +42,15 @@ namespace Zlodey
             var timeLeft = Mathf.Floor(_time - Time.time);
             if (timeLeft < 0) timeLeft = 0;
 
-            UI.WaveScreen.WaveTime.text = timeLeft.ToString();
+            _ui.WaveScreen.WaveTime.text = timeLeft.ToString();
 
 
             if (timeLeft == 0)
             {
-                var timeToNextWave = Config.TimeToNextWave;
+                var timeToNextWave = _staticData.TimeToNextWave;
                 _time = timeToNextWave + Time.time;
 
-                World.NewEntity().Get<SpawnEvent>();
+                _world.NewEntity().Get<SpawnEvent>();
             }
         }
     }
@@ -63,14 +63,14 @@ namespace Zlodey
 
         public void Init()
         {
-            _countEnemies = Config.StartCountEnemies;
+            _countEnemies = _staticData.StartCountEnemies;
         }
         public void Run()
         {
             foreach (var item in _spawnFilter)
             {
-                var spawnTransforms = Scene.Level.SpawnTransforms;
-                var enemies = Config.Enemies;
+                var spawnTransforms = _sceneData.Level.SpawnTransforms;
+                var enemies = _staticData.Enemies;
 
                 for (int i = 0; i < _countEnemies; i++)
                 {
@@ -93,8 +93,8 @@ namespace Zlodey
             {
 
                 Debug.Log("_nextFloorFilter");
-                var floors = Scene.Level.Floors;
-                var time = Config.TimeToNextWave - 1f;
+                var floors = _sceneData.Level.Floors;
+                var time = _staticData.TimeToNextWave - 1f;
 
                 foreach (var floor in floors)
                 {
@@ -122,7 +122,7 @@ namespace Zlodey
             {
                 if (_enemy.GetEntitiesCount() == _deadEnemy.GetEntitiesCount())
                 {
-                    World.NewEntity().Get<NextFloorEvent>();
+                    _world.NewEntity().Get<NextFloorEvent>();
                 }
             }
         }

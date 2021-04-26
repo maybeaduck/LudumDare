@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class BandageActor : MonoBehaviour
 {
-    public float HeallValue;
+    public float  HeallValue;
     public Animator Animator;
 }

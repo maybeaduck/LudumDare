@@ -70,4 +70,7 @@ MonoBehaviour:
     size: 20
   - tag: boomFX
     prefab: {fileID: 130346, guid: 07bf9ced87963e24299c2c2a22bfeeb6, type: 3}
-    size: 10
+    size: 3
+  - tag: fire
+    prefab: {fileID: 4903338428747141350, guid: facd13b961fa94c49aedfbe56f832b62, type: 3}
+    size: 35

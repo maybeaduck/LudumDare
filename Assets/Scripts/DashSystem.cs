@@ -19,7 +19,7 @@ namespace Zlodey
                 ref var rigidbody = ref _filter.Get1(item).Actor.Rigidbody;
 
                 ref var direction = ref _filter.Get2(item).Direction;
-                var dashSpeed = Config.DashSpeed;
+                var dashSpeed = _staticData.DashSpeed;
 
                 if (_time < Time.time)
                 {
@@ -39,7 +39,7 @@ namespace Zlodey
                         animator.SetTrigger("Dash");
                         entity.Get<Dash>();
 
-                        var cooldownTime = Config.DashCooldownTime;
+                        var cooldownTime = _staticData.DashCooldownTime;
                         _time = Time.time + cooldownTime;
 
                         return;

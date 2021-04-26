@@ -20,7 +20,7 @@ namespace Zlodey
                 ref var rigidbody = ref _activePersons.Get1(item).Rigidbody;
                 ref var direction = ref _activePersons.Get2(item).Direction;
 
-                var speed = Config.speed;
+                var speed = _staticData.speed;
 
                 direction = new Vector3(
                     Input.GetAxis("Horizontal"),

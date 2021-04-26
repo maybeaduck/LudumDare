@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -41,5 +42,16 @@ namespace Zlodey
         [Header("Enemies")]
         public GameObject[] Enemies;
         public int StartCountEnemies;
+
+        public List<drop> DropItems = new List<drop>();
+
+        public float DeleteTrupsTime;
+        public float DeleteDropTime;
+    }
+    [Serializable]
+    public class drop
+    {
+        public GameObject DropItem;
+        [Range(0, 1)] public float chance;
     }
 }

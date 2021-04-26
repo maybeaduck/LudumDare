@@ -18,7 +18,7 @@ namespace Zlodey
                 {
                     var bullet = ObjectPoolController.Instance.SpawnFromPool(weapon.BulletType,transform.position,transform.rotation).GetComponent<Bullet>();
                     bullet.Weapon = weapon;
-                    bullet.entity = World.NewEntity();
+                    bullet.entity = _world.NewEntity();
                     bullet.entity.Get<BulletData>() = new BulletData(){MaxLiveTime = weapon.MaxLiveTime,Bullet = bullet,LiveTime = 0};
                     switch (weapon.BulletType)
                     {
