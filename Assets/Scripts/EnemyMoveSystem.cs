@@ -75,10 +75,13 @@ namespace Zlodey
 
                     if (_time < Time.time)
                     {
+                        Debug.Log("SceletonShoot");
                         entity.Get<ShootEvent>() = new ShootEvent()
                         {
+                            
                             Weapon = sceletonActor.Weapon,
-                            Transform = sceletonActor.Weapon.ShootPoint
+                            Transform = sceletonActor.Weapon.ShootPoint,
+                            CountShoots = sceletonActor.Weapon.countShot
                         };
 
                         _time = Time.time + sceletonActor.Weapon.shotsTime;

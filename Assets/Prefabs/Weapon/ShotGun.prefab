@@ -77,8 +77,8 @@ MonoBehaviour:
   ShootPoint: {fileID: 1814870662841658682}
   WeaponModel: {fileID: 0}
   bulletSpeed: 50
-  MinDamage: 1
-  MaxDamage: 1.63
+  MinDamage: 3
+  MaxDamage: 6
   spread: 25.31
   ammunition: 7
   defaultAmunition: 7
