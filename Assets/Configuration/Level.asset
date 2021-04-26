@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Level
   m_EditorClassIdentifier: 
   Scenes:
-  - LevelTemplate ybzpp maybeagoose
+  - LevelTemplate ybzpp
   StartScene: 0
   SkipLevels: 0
