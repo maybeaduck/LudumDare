@@ -29,6 +29,9 @@ namespace Zlodey
         public GameObject HitEnemyFX;
         public GameObject HitWallFX;
 
+        public Color CritColorText;
+        public float DamageCritValue;
+
         [Header("Dash")]
         public float DashCooldownTime;
         public float DashSpeed;
@@ -49,6 +52,7 @@ namespace Zlodey
         public float DeleteTrupsTime;
         public float DeleteDropTime;
 
+        [Header("Cursor")]
 
         [Header("Weapons images")]
         public Sprite AkSprite;

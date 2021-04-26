@@ -55,26 +55,34 @@ namespace Zlodey
                 {
                     //allamunition - 35 if(>0){}else{allamunition= amuton ; allamunition = 0}
                     ref var defaultAmunition = ref playerData.Weapon.defaultAmunition;
-                    if (allAmunition != -1)
-                    {
-                        if (allAmunition - defaultAmunition >= defaultAmunition)
-                        {
-                            playerData.Weapon.ammunition = defaultAmunition;
-                            allAmunition -= defaultAmunition;
-                        }
-                        else
-                        {
-                            playerData.Weapon.ammunition = allAmunition;
-                            allAmunition = 0;
-                        }
-                    }
-                    else
-                    {
-                        playerData.Weapon.ammunition = defaultAmunition;
-                    }
-                    
+
+                    if (_ui.WaveScreen.ReloadImage.gameObject.activeSelf) _ui.WaveScreen.ReloadImage.gameObject.SetActive(false);
+
                     _reload.GetEntity(item).Del<Reload>();
                 }
+
+                //reload cursor
+                if (!_ui.WaveScreen.ReloadImage.gameObject.activeSelf) _ui.WaveScreen.ReloadImage.gameObject.SetActive(true);
+                _ui.WaveScreen.ReloadImage.fillAmount = (playerData.Weapon.reloadTime - time) / playerData.Weapon.reloadTime;
+            }
+        }
+    }
+
+    public class UIReloadSystem : Injects, IEcsRunSystem
+    {
+        private EcsFilter<PersonData, Reload> _reload;
+        public void Run()
+        {
+            var isActive = !_reload.IsEmpty() ? true : false;
+            _ui.WaveScreen.ReloadImage.gameObject.SetActive(isActive);
+
+            foreach (var item in _reload)
+            {
+                ref var playerData = ref _reload.Get1(item);
+                ref var time = ref _reload.Get2(item).timeReload;
+
+                time += Time.deltaTime;
+                _ui.WaveScreen.ReloadImage.fillAmount = (playerData.Weapon.reloadTime - time) / playerData.Weapon.reloadTime;
             }
         }
     }

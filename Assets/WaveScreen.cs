@@ -13,4 +13,5 @@ public class WaveScreen : MonoBehaviour
     public TextMeshProUGUI AammoValue;
     public TextMeshProUGUI AmmoValueMax;
     public Image WeaponImage;
+    public Image ReloadImage;
 }
