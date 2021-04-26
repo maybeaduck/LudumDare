@@ -147,7 +147,7 @@ namespace Zlodey
     public class NextFloorSystem : Injects, IEcsRunSystem, IEcsInitSystem
     {
         private EcsFilter<NextFloorEvent> _nextFloorFilter;
-        private float _floor;
+        private int _floor;
         public void Init()
         {
             _floor = _staticData.StartFloor;
@@ -156,6 +156,20 @@ namespace Zlodey
 
         public void Run()
         {
+            if (_ui.TargetFloorObject)
+            {
+                _ui.TargetFloor.text = _staticData.floorTarget.ToString();    
+            }
+            
+            if (_floor == _staticData.floorTarget && _ui.Congratulations)
+            {
+                _ui.Congratulations.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    Object.Destroy(_ui.Congratulations);
+                    Object.Destroy(_ui.TargetFloorObject);
+                }
+            }
             foreach (var item in _nextFloorFilter)
             {
                 _runtimeData.AudioSource.PlayOneShot(_staticData.NextFloorAudio, 0.8f); //audio

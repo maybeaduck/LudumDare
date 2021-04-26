@@ -116,3 +116,4 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5abc84507fdd60d4e8b57ed3dde3e0d1, type: 3}
   - {fileID: 8300000, guid: bab5725d9c70a154580faef444ce1e09, type: 3}
   AudioIsActive: 1
+  floorTarget: 10

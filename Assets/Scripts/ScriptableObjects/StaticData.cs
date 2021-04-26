@@ -87,7 +87,7 @@ namespace Zlodey
         public AudioClip[] StepPlayerAudio;
 
         public bool AudioIsActive;
-
+        public int floorTarget;
     }
     [Serializable]
     public class drop

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 
 namespace Zlodey
 {
@@ -10,5 +11,8 @@ namespace Zlodey
         public LoseScreen LoseScreen;
         public AudioSource Audio;
         public WaveScreen WaveScreen;
+        public GameObject Congratulations;
+        public TextMeshProUGUI TargetFloor;
+        public GameObject TargetFloorObject;
     }
 }
