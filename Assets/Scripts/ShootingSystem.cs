@@ -64,15 +64,17 @@ namespace Zlodey
 
                     if (allAmunition != -1)
                     {
-                        if (allAmunition - defaultAmunition >= defaultAmunition)
+                        if (allAmunition > 0)
                         {
+                            
+                            allAmunition -= defaultAmunition - playerData.Weapon.ammunition;
                             playerData.Weapon.ammunition = defaultAmunition;
-                            allAmunition -= defaultAmunition;
-                        }
-                        else
-                        {
-                            playerData.Weapon.ammunition = allAmunition;
-                            allAmunition = 0;
+                            if (allAmunition < 0)
+                            {
+                                playerData.Weapon.ammunition -= allAmunition;
+                                allAmunition = 0;
+                            }
+                            
                         }
                     }
                     else

@@ -46,7 +46,7 @@ namespace Zlodey
                         var cooldownTime = _staticData.DashCooldownTime;
                         _time = Time.time + cooldownTime;
 
-                        _runtimeData.AudioSource.PlayOneShot(_staticData.DashAudio); //audio
+                        _runtimeData.AudioSource.PlayOneShot(_staticData.DashAudio,1); //audio
 
                         return;
                     }

@@ -41,7 +41,7 @@ public class PlayerCharacter : MonoBehaviour
         {
             if (playerPerson.StatsComponent.Health.Value < 100f)
             {
-                _runtime.AudioSource.PlayOneShot(_static.CollectBandageAudio,0.5f); //audio
+                _runtime.AudioSource.PlayOneShot(_static.CollectBandageAudio,0.7f); //audio
 
                 var bandageActor = other.GetComponent<BandageActor>();
                 bandageActor.Animator.SetBool("PickUp", true);
@@ -53,7 +53,7 @@ public class PlayerCharacter : MonoBehaviour
 
         if (other.CompareTag("Ammo"))
         {
-            _runtime.AudioSource.PlayOneShot(_static.CollectAmmoAudio, 0.5f); //audio
+            _runtime.AudioSource.PlayOneShot(_static.CollectAmmoAudio, 0.7f); //audio
 
             var ammoActor = other.GetComponent<AmmoActor>();
             ammoActor.Animator.SetBool("PickUp",true);
