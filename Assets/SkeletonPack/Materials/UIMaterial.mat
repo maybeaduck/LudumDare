@@ -62,7 +62,7 @@ Material:
     - _Texture2:
         m_Texture: {fileID: 2800000, guid: 73579a05c464e0f45ab954f678bc7ff8, type: 3}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0.14248753, y: 0.48218906}
+        m_Offset: {x: 0.036914825, y: 0.24538565}
     m_Floats:
     - _Blend: 0.5
     - _BumpScale: 1

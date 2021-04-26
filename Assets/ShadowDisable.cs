@@ -4,5 +4,4 @@ using UnityEngine;
 
 public class ShadowDisable : MonoBehaviour
 {
-    public MeshRenderer[] MeshRenders;
 }

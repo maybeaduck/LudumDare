@@ -59,6 +59,7 @@ namespace Zlodey
 
                 .OneFrame<ShootEvent>()
                 .OneFrame<NextFloorEvent>()
+                .OneFrame<NextWaveEvent>()
                 .OneFrame<SpawnEvent>()
 
                 .Inject(_runtime)

@@ -11,6 +11,7 @@ TagManager:
   - Heall
   - Ammo
   - Weapon
+  - Missile
   layers:
   - Default
   - TransparentFX
@@ -26,7 +27,7 @@ TagManager:
   - Wall
   - BombBullet
   - Player
-  - 
+  - PlayerObstacle
   - 
   - 
   - 
