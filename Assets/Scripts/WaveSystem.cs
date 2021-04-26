@@ -5,19 +5,20 @@ using TMPro;
 
 namespace Zlodey
 {
-    public class WaveSystem : Injects, IEcsRunSystem, IEcsInitSystem
+    public class WaveSystem : Injects, IEcsRunSystem
     {
         private EcsFilter<NextWaveEvent> _filter;
         private float _time;
 
-        public void Init()
-        {
-            SetTimer();
-            UpdateTimer();
-        }
+      
 
         public void Run()
         {
+            if (_runtimeData.GameState != GameState.Play)
+            {
+                _time = _staticData.TimeToNextWave;
+                return;
+            }
             foreach (var item in _filter)
             {
                 SetTimer();
@@ -28,7 +29,7 @@ namespace Zlodey
         void SetTimer()
         {
             var timeToNextWave = _staticData.TimeToNextWave;
-            _time = timeToNextWave + Time.time;
+            _time += timeToNextWave + Time.time;
         }
 
         void UpdateTimer()
@@ -183,6 +184,10 @@ namespace Zlodey
         private EcsFilter<EnemyData, DieFlag>.Exclude<CheckedFlag> _deadEnemy;
         public void Run()
         {
+            if (_runtimeData.GameState != GameState.Play)
+            {
+                return;
+            }
             if (_enemy.GetEntitiesCount() > 0)
             {
                 if (_enemy.GetEntitiesCount() == _deadEnemy.GetEntitiesCount())

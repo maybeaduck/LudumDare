@@ -40,7 +40,7 @@ namespace Zlodey
                 .Add(new PersonControlSystem())
                 .Add(new PersonLookAtMouseSystem())
                 .Add(new HealthSystem())
-                .Add(new TestDamageSystem())
+                // .Add(new TestDamageSystem())
                 
                 .Add(new DieSystem())
                 .Add(new LooseTriggerSystem())

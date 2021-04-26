@@ -10,6 +10,10 @@ namespace Zlodey
         private float _time;
         public void Run()
         {
+            if (_runtimeData.GameState != GameState.Play)
+            {
+                return;
+            }
             foreach (var item in _filter)
             {
                 ref var weapon = ref _filter.Get1(item).Weapon;
