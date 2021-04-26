@@ -33,3 +33,9 @@ MonoBehaviour:
   allWeapons:
   - {fileID: 2044196200, guid: ab793bd0de8f9ca46bf6bdabb9a4ad89, type: 3}
   - {fileID: 4969837420842652905, guid: bf7b9f6769fb5534cbe40274d3d0d95c, type: 3}
+  TimeToNextWave: 10
+  StartFloor: 1
+  Enemies:
+  - {fileID: 4542056333658736601, guid: be7fd5e2e0e820c46988bdace741bf3e, type: 3}
+  - {fileID: 5934165206899752301, guid: 051b52352f630664aac1a73e5a828b86, type: 3}
+  StartCountEnemies: 1

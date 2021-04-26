@@ -33,5 +33,13 @@ namespace Zlodey
         public float sceletonDistanceToPlayer;
         public float sceletonDistanceBackDistance;
         public List<WeaponCollectActor> allWeapons = new List<WeaponCollectActor>();
+
+        [Header("Level")]
+        public float TimeToNextWave;
+        public int StartFloor;
+
+        [Header("Enemies")]
+        public GameObject[] Enemies;
+        public int StartCountEnemies;
     }
 }
