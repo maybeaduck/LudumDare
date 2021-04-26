@@ -29,7 +29,7 @@ namespace Zlodey
         void SetTimer()
         {
             var timeToNextWave = _staticData.TimeToNextWave;
-            _time = timeToNextWave + Time.time;
+            _time += timeToNextWave + Time.time;
         }
 
         void UpdateTimer()
