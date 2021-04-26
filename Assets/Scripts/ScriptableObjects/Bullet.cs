@@ -22,6 +22,7 @@ namespace Zlodey
         {
             //Debug.Log("ИДИ ОТСЮДА БАГ УХАДИ");
             collider.radius = startSizeCollider;
+            
         }
     }
 

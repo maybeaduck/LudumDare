@@ -14,6 +14,7 @@ namespace Zlodey
             {
                 ref var transform = ref _shootFilter.Get1(item).Transform;
                 var a = ObjectPoolController.Instance.SpawnFromPool("shootFX", transform.position, transform.rotation).GetComponent<PoolFX>();
+                a.gameObject.SetActive(true);
                 a.particleSystem.Play();
             }
 
