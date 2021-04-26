@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b65ae013bc9642747be7bbeffdeab795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponModel: {fileID: 100000, guid: 2f85f6620a7ce904faf23d8c70c70a82, type: 3}
+  WeaponModel: {fileID: 100000, guid: 642c7722eece6b14cbacd13719f1368e, type: 3}
   WeaponIndex: 4
   Animator: {fileID: 228229931813955452}
   WeaponScript: {fileID: 1705170506918987032, guid: c19244951808f984ba00e8ec589ea359, type: 3}

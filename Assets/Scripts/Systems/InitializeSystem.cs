@@ -18,14 +18,14 @@ namespace Zlodey
             var spawnedAudioSource = GameObject.Find("AudioSource")?.GetComponent<AudioSource>();
             if (spawnedAudioSource == null)
             {
-                var audioSource = Object.Instantiate(Config.AudioSourcePrefab);
+                var audioSource = Object.Instantiate(_staticData.AudioSourcePrefab);
                 audioSource.name = "AudioSource";
                 Object.DontDestroyOnLoad(audioSource);
-                Runtime.AudioSource = audioSource;
+                base._runtimeData.AudioSource = audioSource;
             }
             else
             {
-                Runtime.AudioSource = spawnedAudioSource;
+                base._runtimeData.AudioSource = spawnedAudioSource;
             }
            
             if (Progress.CurentSound == 0)
@@ -37,17 +37,17 @@ namespace Zlodey
                 _ui.MenuScreen.HapticButton.SwitchImage();    
             }
             if(Progress.CurentHaptic == 0){
-                Runtime.HapticOn = false;
+                base._runtimeData.HapticOn = false;
             }
             else if(Progress.CurentHaptic == 1){
-                Runtime.HapticOn = true;
+                base._runtimeData.HapticOn = true;
             }
             
             if(Progress.CurentSound == 0){
-                Runtime.SoundOn = false;
+                base._runtimeData.SoundOn = false;
             }
             else if(Progress.CurentSound == 1){
-                Runtime.SoundOn = true;
+                base._runtimeData.SoundOn = true;
             }
         }
     }

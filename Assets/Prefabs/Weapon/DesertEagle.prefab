@@ -87,7 +87,7 @@ MonoBehaviour:
   AllAmunitionInInvent: 35
   DefaultAmunitionInInvent: 35
   countShot: 1
-  BulletType: bullet
+  BulletType: sniperBullet
   MaxLiveTime: 1
   BoomSize: 0
   BoomSpeed: 0

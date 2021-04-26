@@ -59,7 +59,7 @@ public class PlayerCharacter : MonoBehaviour
             var weaponActor = other.GetComponent<WeaponCollectActor>();
             if (weaponActor.itsPickUp == false)
             {
-                
+                weaponActor.ThisEntity.Del<DropData>();
                 var dropWeapon = Instantiate(LastCollectWeapon.gameObject, transform.position+Vector3.up*0.5f, Quaternion.identity);
                 _LastDropWeapon = dropWeapon.GetComponent<Collider>();
                 dropWeapon.GetComponent<WeaponCollectActor>().WeaponScript = playerPerson.Weapon;

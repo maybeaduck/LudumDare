@@ -51,7 +51,7 @@ namespace Zlodey
                 .Add(new BulletEffectsSystem())
                 .Add(new ShootFXSystem())
                 .Add(new DashSystem())
-
+                .Add(new RemoveSystem())
                 .Add(new CheckDeadEnemiesSystem())
                 .Add(new WaveSystem())
                 .Add(new SpawnSystem())
@@ -91,6 +91,30 @@ namespace Zlodey
                 _systems = null;
                 _world.Destroy();
                 _world = null;
+            }
+        }
+    }
+
+    internal class RemoveSystem : Injects,IEcsRunSystem
+    {
+        private EcsFilter<DropData> _dropData;
+
+        public void Run()
+        {
+            foreach (var item in _dropData)
+            {
+                ref var drop = ref _dropData.Get1(item);
+                if (drop.weapon.AllAmunitionInInvent == 0 && drop.weapon.ammunition == 0)
+                {
+                    drop.time += Time.deltaTime;
+                    
+                }
+
+                if (drop.time >= _staticData.DeleteDropTime)
+                {
+                    Object.Destroy(drop.collectActor.gameObject);
+                    _dropData.GetEntity(item).Destroy();
+                }
             }
         }
     }
