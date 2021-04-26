@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Zlodey
 {
-    internal class PersonLookAtMouseSystem : IEcsRunSystem
+    internal class PersonLookAtMouseSystem : Injects, IEcsRunSystem
     {
         private EcsWorld _world;
         private RuntimeData _runtime;
@@ -12,7 +12,10 @@ namespace Zlodey
         private EcsFilter<PersonData,PlayerData>.Exclude<StandFlag,DieFlag> _activePersons;
         public void Run()
         {
-            
+            if (_runtimeData.GameState != GameState.Play)
+            {
+                return;
+            }
             foreach (var item in _activePersons)
             {
                 ref var entity = ref _activePersons.GetEntity(item);

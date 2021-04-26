@@ -6,8 +6,13 @@ namespace Zlodey
     internal class PersonControlSystem : Injects, IEcsRunSystem
     {
         private EcsFilter<PersonData,PlayerData>.Exclude<StandFlag,DieFlag> _activePersons;
+        
         public void Run()
         {
+            if (_runtimeData.GameState != GameState.Play)
+            {
+                return;
+            }
             foreach (var item in _activePersons)
             {
                 ref var entity = ref _activePersons.GetEntity(item);

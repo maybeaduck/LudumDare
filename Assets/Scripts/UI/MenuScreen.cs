@@ -22,6 +22,8 @@ namespace Zlodey
             EcsEntity _startEvent = _world.NewEntity();
             _startEvent.Get<ChangeGameStateEvent>().State = GameState.Play;
             Service<UI>.Get().GameScreen.Show();
+            Service<UI>.Get().WaveScreen.gameObject.SetActive(true);
+            Service<SceneData>.Get().Lobby.gameObject.SetActive(false);
             Hide();
         }
     }

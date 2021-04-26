@@ -1905,7 +1905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ee946d167e4e3458327823ef0953ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartGameButton: {fileID: 7691685436899330545}
+  StartGameButton: {fileID: 3651848112509086198}
   SoundButton: {fileID: 5445161086082143684}
   HapticButton: {fileID: 80242039545223031}
 --- !u!114 &1109993567892470350

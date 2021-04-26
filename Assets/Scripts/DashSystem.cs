@@ -12,6 +12,10 @@ namespace Zlodey
 
         public void Run()
         {
+            if (_runtimeData.GameState != GameState.Play)
+            {
+                return;
+            }
             foreach (var item in _filter)
             {
                 ref var entity = ref _filter.GetEntity(item);
