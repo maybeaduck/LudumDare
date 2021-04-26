@@ -18,7 +18,7 @@ public class PersonActor : MonoBehaviour
     public float ChanceDropItem;
     private EcsWorld _world;
     public GameObject HealthBar;
-    public float DestroyTrup;
+    
 
     void Start()
     {

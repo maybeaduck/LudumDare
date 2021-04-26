@@ -74,6 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bdd2e2e90bfc094ca82e2651beafd10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WeaponType: 8
   ShootPoint: {fileID: 1814870662841658682}
   WeaponModel: {fileID: 0}
   bulletSpeed: 50
