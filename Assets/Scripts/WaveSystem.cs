@@ -59,7 +59,7 @@ namespace Zlodey
                 ref var weapon = ref _person.Get1(item).Weapon;
                 
                 if (!weapon) return;
-                Debug.Log(weapon.WeaponType);
+                //Debug.Log(weapon.WeaponType);
                 Sprite sprite = _staticData.SniperGunSprite;
                     switch (weapon.WeaponType)
                     {
@@ -170,8 +170,8 @@ namespace Zlodey
 
     public class CheckDeadEnemiesSystem : Injects, IEcsRunSystem
     {
-        private EcsFilter<EnemyData> _enemy;
-        private EcsFilter<EnemyData, DieFlag> _deadEnemy;
+        private EcsFilter<EnemyData>.Exclude<CheckedFlag> _enemy;
+        private EcsFilter<EnemyData, DieFlag>.Exclude<CheckedFlag> _deadEnemy;
         public void Run()
         {
             if (_enemy.GetEntitiesCount() > 0)
@@ -183,7 +183,7 @@ namespace Zlodey
 
                     foreach (var item in _enemy)
                     {
-                        _enemy.GetEntity(item).Destroy();
+                        _enemy.GetEntity(item).Get<CheckedFlag>();
                     }
                 }
             }
@@ -195,6 +195,10 @@ namespace Zlodey
     }
 
     internal struct SpawnEvent
+    {
+    }
+
+    internal struct CheckedFlag
     {
     }
 }

@@ -57,6 +57,7 @@ namespace Zlodey
                 .Add(new SpawnSystem())
                 .Add(new NextFloorSystem())
                 .Add(new WeaponUIUpdateSystem())
+                .Add(new UIReloadSystem())
 
                 .OneFrame<ShootEvent>()
                 .OneFrame<NextFloorEvent>()

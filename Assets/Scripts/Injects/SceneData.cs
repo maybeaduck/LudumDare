@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace Zlodey
 {
@@ -6,5 +7,6 @@ namespace Zlodey
     {
         public Camera Camera;
         public Level Level;
+        public Image Cursor;
     }
 }
