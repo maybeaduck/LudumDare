@@ -18,12 +18,14 @@ public class PlayerCharacter : MonoBehaviour
     private Transform weaponTransform;
     public WeaponCollectActor LastCollectWeapon;
     public StaticData _static;
+    public RuntimeData _runtime;
     public Collider _LastDropWeapon;
     private IEnumerator Start()
     {
         yield return null;
         playerPerson.ThisEntity.Get<PlayerData>();
         _static = Service<StaticData>.Get();
+        _runtime = Service<RuntimeData>.Get();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -39,6 +41,8 @@ public class PlayerCharacter : MonoBehaviour
         {
             if (playerPerson.StatsComponent.Health.Value < 100f)
             {
+                _runtime.AudioSource.PlayOneShot(_static.CollectBandageAudio,0.5f); //audio
+
                 var bandageActor = other.GetComponent<BandageActor>();
                 bandageActor.Animator.SetBool("PickUp", true);
                 playerPerson.ThisEntity.Get<DamageEvent>().Value = bandageActor.HeallValue * -1;
@@ -49,6 +53,8 @@ public class PlayerCharacter : MonoBehaviour
 
         if (other.CompareTag("Ammo"))
         {
+            _runtime.AudioSource.PlayOneShot(_static.CollectAmmoAudio, 0.5f); //audio
+
             var ammoActor = other.GetComponent<AmmoActor>();
             ammoActor.Animator.SetBool("PickUp",true);
             playerPerson.Weapon.AllAmunitionInInvent += playerPerson.Weapon.defaultAmunition* ammoActor.CountAmmoPack;
@@ -56,6 +62,8 @@ public class PlayerCharacter : MonoBehaviour
         }
         if (other.CompareTag("Weapon"))
         {
+            _runtime.AudioSource.PlayOneShot(_static.CollectWeaponAudio, 0.5f); //audio
+
             var weaponActor = other.GetComponent<WeaponCollectActor>();
             if (weaponActor.itsPickUp == false)
             {

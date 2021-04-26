@@ -140,6 +140,8 @@ namespace Zlodey
                 }
 
                 _countEnemies++;
+
+                _runtimeData.AudioSource.PlayOneShot(_staticData.SceletonAudio, 0.5f); //audio
             }
         }
     }
@@ -157,6 +159,8 @@ namespace Zlodey
         {
             foreach (var item in _nextFloorFilter)
             {
+                _runtimeData.AudioSource.PlayOneShot(_staticData.NextFloorAudio, 0.8f); //audio
+
                 _floor++;
                 _ui.WaveScreen.FloorNumber.text = _floor.ToString();
 

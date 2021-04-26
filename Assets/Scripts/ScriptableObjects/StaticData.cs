@@ -81,7 +81,12 @@ namespace Zlodey
         public AudioClip NextFloorAudio;
         public AudioClip ReloadAudio;
         public AudioClip DashAudio;
+        public AudioClip DieAudio;
+        public AudioClip CollectWeaponAudio;
+        public AudioClip ShotWeaponAudio;
         public AudioClip[] StepPlayerAudio;
+
+        public bool AudioIsActive;
 
     }
     [Serializable]

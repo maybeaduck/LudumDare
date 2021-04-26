@@ -29,6 +29,40 @@ namespace Zlodey
                             bullet.entity.Get<DestroyFlag>().bullet = bullet.gameObject;
                             break;
                     }
+
+                    switch (weapon.WeaponType)
+                    {
+                        case WeaponType.Weapon:
+                            _runtimeData.AudioSource.PlayOneShot(_staticData.ShotWeaponAudio, 0.1f); //audio
+                            break;
+                        case WeaponType.Ak:
+                            _runtimeData.AudioSource.PlayOneShot(_staticData.ShotAkAudio, 0.1f); //audio
+                            break;
+                        case WeaponType.Sniper:
+                            _runtimeData.AudioSource.PlayOneShot(_staticData.ShotSniperGunAudio, 0.1f); //audio
+                            break;
+                        case WeaponType.FiveSeven:
+                            _runtimeData.AudioSource.PlayOneShot(_staticData.ShotFiveSevenAudio, 0.1f); //audio
+                            break;
+                        case WeaponType.FireGun:
+                            _runtimeData.AudioSource.PlayOneShot(_staticData.ShotFireGunAudio, 0.05f); //audio
+                            break;
+                        case WeaponType.DesertEagle:
+                            _runtimeData.AudioSource.PlayOneShot(_staticData.ShotDesertEagleAudio, 0.1f); //audio
+                            break;
+                        case WeaponType.MashineGun:
+                            _runtimeData.AudioSource.PlayOneShot(_staticData.ShotMashinePistolAudio, 0.1f); //audio
+                            break;
+                        case WeaponType.BombGun:
+                            _runtimeData.AudioSource.PlayOneShot(_staticData.ShotBombGunAudio, 0.1f); //audio
+                            break;
+                        case WeaponType.ShotGun:
+                            _runtimeData.AudioSource.PlayOneShot(_staticData.ShotShotGunAudio, 0.1f); //audio
+                            break;
+                        default:
+                            break;
+                    }
+
                     var direction = (bullet.transform.forward  ) * speed;
                     direction =direction + new Vector3(Random.Range(-bullet.Weapon.spread, bullet.Weapon.spread),
                         0, Random.Range(-bullet.Weapon.spread, bullet.Weapon.spread));

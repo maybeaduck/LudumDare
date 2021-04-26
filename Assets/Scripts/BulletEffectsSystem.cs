@@ -19,7 +19,7 @@ namespace Zlodey
                 {
                     
                     
-                    Debug.Log("BoomEvent");     
+                    //Debug.Log("BoomEvent");     
                     _boom.GetEntity(item).Get<BoomEvent>().Position = bullet.Bullet.transform.position;    
                     
                     

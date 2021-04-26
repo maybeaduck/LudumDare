@@ -45,6 +45,8 @@ namespace Zlodey
                     if (weapon.ammunition == 0 && !entityPlayer.Has<Reload>())
                     {
                         entityPlayer.Get<Reload>();
+
+                        _runtimeData.AudioSource.PlayOneShot(_staticData.ReloadAudio); //audio
                     }
                 }
             }

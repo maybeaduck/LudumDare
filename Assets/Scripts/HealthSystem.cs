@@ -18,9 +18,14 @@ namespace Zlodey
                 {
                     characterStats.Health.Value = 0;
                     _filter.GetEntity(i).Get<DieEvent>();
+
+                    if (_filter.GetEntity(i).Has<PlayerData>())
+                    {
+                        _runtimeData.AudioSource.PlayOneShot(_staticData.DieAudio); //audio
+                    }
                 }
-                
-                
+
+
                 if (characterStats.Health.Value > _filter.Get1(i).FullHealth)
                 {
                     characterStats.Health.Value = _filter.Get1(i).FullHealth;

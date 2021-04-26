@@ -27,7 +27,9 @@ namespace Zlodey
             {
                 base._runtimeData.AudioSource = spawnedAudioSource;
             }
-           
+
+            _runtimeData.AudioSource.enabled = _staticData.AudioIsActive;
+
             if (Progress.CurentSound == 0)
             {
                 _ui.MenuScreen.SoundButton.SwitchImage();    
