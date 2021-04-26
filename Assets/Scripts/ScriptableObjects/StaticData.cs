@@ -47,6 +47,17 @@ namespace Zlodey
 
         public float DeleteTrupsTime;
         public float DeleteDropTime;
+
+
+        [Header("Weapons images")]
+        public Sprite AkSprite;
+        public Sprite BombGunSprite;
+        public Sprite DesertEagleSprite;
+        public Sprite FireGunSprite;
+        public Sprite FiveSevenSprite;
+        public Sprite MashinePistolSprite;
+        public Sprite ShotGunSprite;
+        public Sprite SniperGunSprite;
     }
     [Serializable]
     public class drop

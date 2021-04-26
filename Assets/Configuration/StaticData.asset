@@ -69,3 +69,11 @@ MonoBehaviour:
     chance: 0.1
   DeleteTrupsTime: 15
   DeleteDropTime: 15
+  AkSprite: {fileID: 21300000, guid: d2544e5a98fb9ad4d8088625e1cf0b28, type: 3}
+  BombGunSprite: {fileID: 21300000, guid: d74cea330edc30e4a99e884106a75587, type: 3}
+  DesertEagleSprite: {fileID: 21300000, guid: 032bca08d035061479b283446af8732d, type: 3}
+  FireGunSprite: {fileID: 21300000, guid: f5cc02ab1c5064e478e26bde1b7c68f8, type: 3}
+  FiveSevenSprite: {fileID: 21300000, guid: f2bbdc27a5c10074e8ca38bf39c882fb, type: 3}
+  MashinePistolSprite: {fileID: 21300000, guid: 2abfdcf1d7b36f64f85c314c7866ed16, type: 3}
+  ShotGunSprite: {fileID: 21300000, guid: 1d30f3349612af44f8acc3384e9a6351, type: 3}
+  SniperGunSprite: {fileID: 21300000, guid: 8c8aa02f293f28542a53653e3474f0b9, type: 3}
