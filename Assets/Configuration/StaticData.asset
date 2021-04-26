@@ -41,7 +41,7 @@ MonoBehaviour:
   - {fileID: 7406555906262369701, guid: f2de7c5ad4119664184178ef218863fa, type: 3}
   - {fileID: 3158697989357463180, guid: ed7aaab9298594146a1f43b1830abb96, type: 3}
   - {fileID: 6341726486474751358, guid: 4fc0c6bb3f4b79e488be97161f3cd4ea, type: 3}
-  TimeToNextWave: 99999
+  TimeToNextWave: 10
   StartFloor: 1
   Enemies:
   - {fileID: 4542056333658736601, guid: be7fd5e2e0e820c46988bdace741bf3e, type: 3}
@@ -92,7 +92,7 @@ MonoBehaviour:
   MashinePistolSprite: {fileID: 21300000, guid: 2abfdcf1d7b36f64f85c314c7866ed16, type: 3}
   ShotGunSprite: {fileID: 21300000, guid: 1d30f3349612af44f8acc3384e9a6351, type: 3}
   SniperGunSprite: {fileID: 21300000, guid: 8c8aa02f293f28542a53653e3474f0b9, type: 3}
-  DeffaultPistol: {fileID: 7308670306824939902, guid: 5aff58b2bb53c0f4d8fc78832f5d571b, type: 3}
+  DeffaultPistol: {fileID: 4459087071528669388, guid: 4fc0c6bb3f4b79e488be97161f3cd4ea, type: 3}
   CollectAmmoAudio: {fileID: 8300000, guid: 18f32c415c0e4d545bc034ca21ec232b, type: 3}
   CollectBandageAudio: {fileID: 8300000, guid: 78d372427c9e7aa40917d620347ef0e9, type: 3}
   ShotAkAudio: {fileID: 8300000, guid: 2c917c0c336c44a40bad94a1ad51c225, type: 3}
@@ -116,3 +116,4 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5abc84507fdd60d4e8b57ed3dde3e0d1, type: 3}
   - {fileID: 8300000, guid: bab5725d9c70a154580faef444ce1e09, type: 3}
   AudioIsActive: 1
+  floorTarget: 10
