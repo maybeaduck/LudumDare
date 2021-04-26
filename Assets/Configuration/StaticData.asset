@@ -42,31 +42,43 @@ MonoBehaviour:
   StartFloor: 1
   Enemies:
   - {fileID: 4542056333658736601, guid: be7fd5e2e0e820c46988bdace741bf3e, type: 3}
+  - {fileID: 4542056333658736601, guid: be7fd5e2e0e820c46988bdace741bf3e, type: 3}
+  - {fileID: 4542056333658736601, guid: be7fd5e2e0e820c46988bdace741bf3e, type: 3}
+  - {fileID: 4542056333658736601, guid: be7fd5e2e0e820c46988bdace741bf3e, type: 3}
   - {fileID: 5934165206899752301, guid: 051b52352f630664aac1a73e5a828b86, type: 3}
+  - {fileID: 5934165206899752301, guid: 051b52352f630664aac1a73e5a828b86, type: 3}
+  - {fileID: 5934165206899752301, guid: 051b52352f630664aac1a73e5a828b86, type: 3}
+  - {fileID: 3146827457341519075, guid: 184d5412a0a289147aac198dc112af5b, type: 3}
+  - {fileID: 3146827457341519075, guid: 184d5412a0a289147aac198dc112af5b, type: 3}
+  - {fileID: 6240624860312164229, guid: afea8cc07cc5b564eb6918b59a16e81b, type: 3}
+  - {fileID: 4123077515439211696, guid: dbe90019808da18468a337d5a5023536, type: 3}
+  - {fileID: 4123077515439211696, guid: dbe90019808da18468a337d5a5023536, type: 3}
+  - {fileID: 4123077515439211696, guid: dbe90019808da18468a337d5a5023536, type: 3}
+  - {fileID: 6758525720406773871, guid: a3fc8bf4dca52414bad6ef2fb50a6420, type: 3}
   StartCountEnemies: 1
   DropItems:
   - DropItem: {fileID: 4221951194816965820, guid: e0e17997c1ec9c54097029acd46c311a, type: 3}
-    chance: 0.2
+    chance: 0.454
   - DropItem: {fileID: 4221951194816965820, guid: 60d3129f43e6e5a4e89ba0f5f6aec299, type: 3}
-    chance: 0.5
+    chance: 0.656
   - DropItem: {fileID: 5973312838079732077, guid: f7cbd9f53a47d9c479886303709130b3, type: 3}
-    chance: 0.706
+    chance: 0.842
   - DropItem: {fileID: 5973312838079732077, guid: 5b5f80b728def0b48b3d3c4cc7feda86, type: 3}
-    chance: 0.309
+    chance: 0.491
   - DropItem: {fileID: 4881340159457769936, guid: bf620e6dfb20af6428a49db83b079466, type: 3}
-    chance: 0.1
+    chance: 0.046
   - DropItem: {fileID: 2385749461852141915, guid: bf7b9f6769fb5534cbe40274d3d0d95c, type: 3}
-    chance: 0.1
+    chance: 0.107
   - DropItem: {fileID: 7341864319918037210, guid: ab793bd0de8f9ca46bf6bdabb9a4ad89, type: 3}
-    chance: 0.1
+    chance: 0.027
   - DropItem: {fileID: 4459087071528669388, guid: e78ec1ca4ad2b2345a02f2dae02990f8, type: 3}
-    chance: 0.1
+    chance: 0.173
   - DropItem: {fileID: 5635825740666096446, guid: ed7aaab9298594146a1f43b1830abb96, type: 3}
-    chance: 0.1
+    chance: 0.039
   - DropItem: {fileID: 3007356010899330820, guid: 906064ff22c94e84cb3c907ebe1031e5, type: 3}
-    chance: 0.1
+    chance: 0.056
   - DropItem: {fileID: 228229930689013783, guid: f2de7c5ad4119664184178ef218863fa, type: 3}
-    chance: 0.1
+    chance: 0.193
   DeleteTrupsTime: 15
   DeleteDropTime: 15
   AkSprite: {fileID: 21300000, guid: d2544e5a98fb9ad4d8088625e1cf0b28, type: 3}
