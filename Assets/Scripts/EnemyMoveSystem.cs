@@ -75,7 +75,7 @@ namespace Zlodey
 
                     if (_time < Time.time)
                     {
-                        Debug.Log("SceletonShoot");
+                        //Debug.Log("SceletonShoot");
                         entity.Get<ShootEvent>() = new ShootEvent()
                         {
                             

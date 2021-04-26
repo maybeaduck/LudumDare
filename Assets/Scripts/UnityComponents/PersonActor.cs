@@ -38,7 +38,7 @@ public class PersonActor : MonoBehaviour
         
         if (other.CompareTag("Bullet"))
         {
-            Debug.Log("BulletsPOPALO " + gameObject.name);
+            //Debug.Log("BulletsPOPALO " + gameObject.name);
             var View = other.GetComponent<ViewBullet>();
             
             ThisEntity.Get<DamageEvent>().Value += Random.Range(View.actor.Weapon.MinDamage,View.actor.Weapon.MaxDamage);
@@ -51,13 +51,13 @@ public class PersonActor : MonoBehaviour
 
             if (!View.actor.SniperBullet)
             {
-                Debug.Log(" Я ТУПАЯ ПУЛЯ");
+                //Debug.Log(" Я ТУПАЯ ПУЛЯ");
                 View.actor.gameObject.SetActive(false);    
             }
 
             if (View.actor.entity.Has<BoomFlag>())
             {
-                Debug.Log(" Я ВЗРЫВНАЯ ПУЛЯ");
+                //Debug.Log(" Я ВЗРЫВНАЯ ПУЛЯ");
                 View.actor.entity.Get<BoomEvent>().Position = View.actor.transform.position;
                 View.actor.Rigidbody.velocity = Vector3.zero;
             }
