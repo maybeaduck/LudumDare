@@ -60,14 +60,26 @@ namespace Zlodey
                     //allamunition - 35 if(>0){}else{allamunition= amuton ; allamunition = 0}
                     ref var defaultAmunition = ref playerData.Weapon.defaultAmunition;
 
-                    if (_ui.WaveScreen.ReloadImage.gameObject.activeSelf) _ui.WaveScreen.ReloadImage.gameObject.SetActive(false);
+                    if (allAmunition != -1)
+                    {
+                        if (allAmunition - defaultAmunition >= defaultAmunition)
+                        {
+                            playerData.Weapon.ammunition = defaultAmunition;
+                            allAmunition -= defaultAmunition;
+                        }
+                        else
+                        {
+                            playerData.Weapon.ammunition = allAmunition;
+                            allAmunition = 0;
+                        }
+                    }
+                    else
+                    {
+                        playerData.Weapon.ammunition = defaultAmunition;
+                    }
 
                     _reload.GetEntity(item).Del<Reload>();
                 }
-
-                //reload cursor
-                if (!_ui.WaveScreen.ReloadImage.gameObject.activeSelf) _ui.WaveScreen.ReloadImage.gameObject.SetActive(true);
-                _ui.WaveScreen.ReloadImage.fillAmount = (playerData.Weapon.reloadTime - time) / playerData.Weapon.reloadTime;
             }
         }
     }
