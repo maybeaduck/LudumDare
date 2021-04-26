@@ -32,5 +32,6 @@ namespace Zlodey
         public float DashSpeed;
         public float sceletonDistanceToPlayer;
         public float sceletonDistanceBackDistance;
+        public List<WeaponCollectActor> allWeapons = new List<WeaponCollectActor>();
     }
 }

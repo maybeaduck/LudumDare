@@ -10,9 +10,9 @@ namespace Zlodey
         public void Run()
         {
             foreach (var item in _filter)
-            {
-                ref var transform = ref _filter.Get1(item).Transform;
-                ref var weapon = ref _filter.Get1(item).Weapon;
+            { 
+                var transform = _filter.Get1(item).Transform;
+                var weapon = _filter.Get1(item).Weapon;
                 var speed = weapon.bulletSpeed;
                 for (int i = 0; i < _filter.Get1(item).CountShoots; i++)
                 {

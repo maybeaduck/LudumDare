@@ -10,6 +10,7 @@ TagManager:
   - Attack
   - Heall
   - Ammo
+  - Weapon
   layers:
   - Default
   - TransparentFX
