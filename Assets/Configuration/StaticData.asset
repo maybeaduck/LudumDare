@@ -38,6 +38,7 @@ MonoBehaviour:
   - {fileID: 5503342570614946486, guid: 906064ff22c94e84cb3c907ebe1031e5, type: 3}
   - {fileID: 7406555906262369701, guid: f2de7c5ad4119664184178ef218863fa, type: 3}
   - {fileID: 3158697989357463180, guid: ed7aaab9298594146a1f43b1830abb96, type: 3}
+  - {fileID: 6341726486474751358, guid: 4fc0c6bb3f4b79e488be97161f3cd4ea, type: 3}
   TimeToNextWave: 10
   StartFloor: 1
   Enemies:
@@ -62,9 +63,9 @@ MonoBehaviour:
   - DropItem: {fileID: 4221951194816965820, guid: 60d3129f43e6e5a4e89ba0f5f6aec299, type: 3}
     chance: 0.656
   - DropItem: {fileID: 5973312838079732077, guid: f7cbd9f53a47d9c479886303709130b3, type: 3}
-    chance: 0.842
+    chance: 0.907
   - DropItem: {fileID: 5973312838079732077, guid: 5b5f80b728def0b48b3d3c4cc7feda86, type: 3}
-    chance: 0.491
+    chance: 0.398
   - DropItem: {fileID: 4881340159457769936, guid: bf620e6dfb20af6428a49db83b079466, type: 3}
     chance: 0.046
   - DropItem: {fileID: 2385749461852141915, guid: bf7b9f6769fb5534cbe40274d3d0d95c, type: 3}
@@ -89,3 +90,4 @@ MonoBehaviour:
   MashinePistolSprite: {fileID: 21300000, guid: 2abfdcf1d7b36f64f85c314c7866ed16, type: 3}
   ShotGunSprite: {fileID: 21300000, guid: 1d30f3349612af44f8acc3384e9a6351, type: 3}
   SniperGunSprite: {fileID: 21300000, guid: 8c8aa02f293f28542a53653e3474f0b9, type: 3}
+  DeffaultPistol: {fileID: 0}

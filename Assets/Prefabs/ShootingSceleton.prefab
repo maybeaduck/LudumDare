@@ -6449,7 +6449,6 @@ MonoBehaviour:
   Weapon: {fileID: 3311532927377867335}
   ChanceDropItem: 0.411
   HealthBar: {fileID: 8009610373866266440}
-  DestroyTrup: 0
 --- !u!114 &3347645407408180095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6519,7 +6518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4cbe9352056a67478325da026d647e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value: 50
+  Value: 100
   HealthSlider: {fileID: 1586601431709041899}
 --- !u!136 &3050187943768916604
 CapsuleCollider:

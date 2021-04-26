@@ -25,7 +25,10 @@ namespace Zlodey
                     
                     if (_time < Time.time && weapon.ammunition > 0)
                     {
-                        weapon.ammunition--;
+                        
+                        weapon.ammunition--;    
+                        
+                        
                         ref var entity = ref entityPlayer;
                         ref var shootPoint = ref weapon.ShootPoint;
                         entity.Get<ShootEvent>() = new ShootEvent(){Transform = shootPoint,Weapon = weapon,CountShoots = weapon.countShot};
@@ -48,20 +51,28 @@ namespace Zlodey
                 ref var time = ref _reload.Get2(item).timeReload;
                 time += Time.deltaTime;
                 ref var allAmunition =ref playerData.Weapon.AllAmunitionInInvent;
-                if (time >= playerData.Weapon.reloadTime&& allAmunition > 0)
+                if (time >= playerData.Weapon.reloadTime)
                 {
                     //allamunition - 35 if(>0){}else{allamunition= amuton ; allamunition = 0}
                     ref var defaultAmunition = ref playerData.Weapon.defaultAmunition;
-                    if (allAmunition - defaultAmunition >= defaultAmunition)
+                    if (allAmunition != -1)
                     {
-                        playerData.Weapon.ammunition = defaultAmunition;
-                        allAmunition -= defaultAmunition;
+                        if (allAmunition - defaultAmunition >= defaultAmunition)
+                        {
+                            playerData.Weapon.ammunition = defaultAmunition;
+                            allAmunition -= defaultAmunition;
+                        }
+                        else
+                        {
+                            playerData.Weapon.ammunition = allAmunition;
+                            allAmunition = 0;
+                        }
                     }
                     else
                     {
-                        playerData.Weapon.ammunition = allAmunition;
-                        allAmunition = 0;
+                        playerData.Weapon.ammunition = defaultAmunition;
                     }
+                    
                     _reload.GetEntity(item).Del<Reload>();
                 }
             }

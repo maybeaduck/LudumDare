@@ -1834,7 +1834,7 @@ MonoBehaviour:
   Rigidbody: {fileID: 716760469734456403}
   StatsComponent: {fileID: 4762706584747920607}
   Weapon: {fileID: 4448592577349541937}
-  ChanceDropItem: 0.488
+  ChanceDropItem: 0.675
   HealthBar: {fileID: 1001031999654201598}
 --- !u!114 &5527749340387171529
 MonoBehaviour:
@@ -1905,7 +1905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4cbe9352056a67478325da026d647e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value: 35
+  Value: 50
   HealthSlider: {fileID: 8414702016336614237}
 --- !u!136 &5230872384795547082
 CapsuleCollider:
