@@ -52,6 +52,7 @@ namespace Zlodey
                 .Add(new ShootFXSystem())
                 .Add(new DashSystem())
                 .Add(new DefaultPistol())
+                .Add(new ChangeSettingsSystem())
                 .Add(new RemoveSystem())
                 .Add(new CheckDeadEnemiesSystem())
                 .Add(new WaveSystem())
@@ -99,9 +100,21 @@ namespace Zlodey
         }
     }
 
+    internal class ChangeSettingsSystem : Injects,IEcsRunSystem
+    {
+        public void Run()
+        {
+            if (_sceneData.PostProcess.activeSelf != _ui.MenuScreen.SettingsWindow.PostProcess.isOn)
+            {
+                _sceneData.PostProcess.SetActive(!_sceneData.PostProcess.activeSelf);
+            }
+        }
+    }
+
     internal class DefaultPistol : Injects, IEcsRunSystem
     {
-        private EcsFilter<PersonData, PlayerData> _players;
+        private EcsFilter<PersonData, PlayerData>.Exclude<WeaponDefoult> _players;
+        private EcsFilter<PersonData, PlayerData, WeaponDefoult> _weaponDefoult;
         public void Run()
         {
             foreach (var item in _players)
@@ -109,11 +122,25 @@ namespace Zlodey
                 ref var weapon = ref _players.Get1(item).Weapon;
                 if (weapon.AllAmunitionInInvent == 0 && weapon.ammunition == 0)
                 {
-                    GameObject.Instantiate(_staticData.DeffaultPistol, _players.Get1(item).Actor.transform.position,
+                    GameObject.Instantiate(_staticData.DeffaultPistol, _players.Get1(item).Actor.transform.position + Vector3.up * 1.5f,
                         Quaternion.identity);
+                    _players.GetEntity(item).Get<WeaponDefoult>();
+                }
+            }
+
+            foreach (var item in _weaponDefoult)
+            {
+                ref var weapon = ref _players.Get1(item).Weapon;
+                if (weapon.AllAmunitionInInvent != -1)
+                {
+                    _weaponDefoult.GetEntity(item).Del<WeaponDefoult>();
                 }
             }
         }
+    }
+
+    internal struct WeaponDefoult
+    {
     }
 
     internal class RemoveSystem : Injects,IEcsRunSystem

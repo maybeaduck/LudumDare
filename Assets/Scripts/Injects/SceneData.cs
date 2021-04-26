@@ -8,5 +8,6 @@ namespace Zlodey
         public Camera Camera;
         public Level Level;
         public GameObject Lobby;
+        public GameObject PostProcess;
     }
 }

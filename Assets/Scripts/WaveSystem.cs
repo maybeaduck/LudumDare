@@ -16,7 +16,6 @@ namespace Zlodey
         {
             if (_runtimeData.GameState != GameState.Play)
             {
-                _time = _staticData.TimeToNextWave;
                 return;
             }
             foreach (var item in _filter)
@@ -29,7 +28,7 @@ namespace Zlodey
         void SetTimer()
         {
             var timeToNextWave = _staticData.TimeToNextWave;
-            _time += timeToNextWave + Time.time;
+            _time = timeToNextWave + Time.time;
         }
 
         void UpdateTimer()
