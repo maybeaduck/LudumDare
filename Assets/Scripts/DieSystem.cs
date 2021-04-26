@@ -28,6 +28,7 @@ namespace Zlodey
             {
                 ref var personData = ref _die.Get1(item);
                 personData.Actor.Animator.SetBool("Die",true);
+                personData.Actor.Animator.SetLayerWeight(personData.Actor.Animator.GetLayerIndex("hand"), 0f);
                 personData.Actor.GetComponent<Collider>().enabled = false;
                 personData.Rigidbody.isKinematic = true;
                 personData.Actor.HealthBar.SetActive(false);
