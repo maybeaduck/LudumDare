@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
@@ -6,6 +7,7 @@ using Leopotam.Ecs;
 using LeopotamGroup.Globals;
 using UnityEngine;
 using Zlodey;
+using Random = UnityEngine.Random;
 
 
 public class PlayerCharacter : MonoBehaviour
@@ -16,6 +18,7 @@ public class PlayerCharacter : MonoBehaviour
     private Transform weaponTransform;
     public WeaponCollectActor LastCollectWeapon;
     public StaticData _static;
+    public Collider _LastDropWeapon;
     private IEnumerator Start()
     {
         yield return null;
@@ -56,9 +59,12 @@ public class PlayerCharacter : MonoBehaviour
             var weaponActor = other.GetComponent<WeaponCollectActor>();
             if (weaponActor.itsPickUp == false)
             {
-                var dropWeapon = Instantiate(LastCollectWeapon, transform.position, Quaternion.identity);
-                dropWeapon.WeaponScript = playerPerson.Weapon;
-                LastCollectWeapon = _static.allWeapons.Find(actor => actor.name.Contains(weaponActor.name));
+                
+                var dropWeapon = Instantiate(LastCollectWeapon.gameObject, transform.position+Vector3.up*0.5f, Quaternion.identity);
+                _LastDropWeapon = dropWeapon.GetComponent<Collider>();
+                dropWeapon.GetComponent<WeaponCollectActor>().WeaponScript = playerPerson.Weapon;
+                dropWeapon.GetComponent<WeaponCollectActor>().itsPickUp = true;
+                LastCollectWeapon = _static.allWeapons.Find(actor => actor.WeaponIndex == weaponActor.WeaponIndex);
                 weaponActor.Animator.SetBool("PickUp",true);
                 var weaponScript = Instantiate(weaponActor.WeaponScript, playerPerson.transform);
                 playerPerson.Weapon.gameObject.SetActive(false);
@@ -76,6 +82,14 @@ public class PlayerCharacter : MonoBehaviour
                 
             }
             
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other == _LastDropWeapon)
+        {
+            _LastDropWeapon.GetComponent<WeaponCollectActor>().itsPickUp = false;
         }
     }
 }

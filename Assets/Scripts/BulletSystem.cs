@@ -26,7 +26,7 @@ namespace Zlodey
                             bullet.entity.Get<BoomFlag>() = new BoomFlag(){BoomSize = weapon.BoomSize,BoomSpeed = weapon.BoomSpeed,BoomActor = bullet.Boom};
                             break;
                         default:
-                            
+                            bullet.entity.Get<DestroyFlag>().bullet = bullet.gameObject;
                             break;
                     }
                     var direction = (bullet.transform.forward  ) * speed;
@@ -37,6 +37,11 @@ namespace Zlodey
                 }
             }
         }
+    }
+
+    public struct DestroyFlag
+    {
+        public GameObject bullet;
     }
 
     public struct BoomFlag
