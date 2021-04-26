@@ -27,14 +27,15 @@ MonoBehaviour:
   HitEnemyFX: {fileID: 160684, guid: de85f8f81ea29ea479250adb36debd92, type: 3}
   HitWallFX: {fileID: 1649514149693448, guid: d519ad6ef8ea3cd4f9acf13f6646a601, type: 3}
   DashCooldownTime: 0.6
-  DashSpeed: 15
+  DashSpeed: 16
   sceletonDistanceToPlayer: 10
   sceletonDistanceBackDistance: 8
   allWeapons:
   - {fileID: 2044196200, guid: ab793bd0de8f9ca46bf6bdabb9a4ad89, type: 3}
   - {fileID: 4969837420842652905, guid: bf7b9f6769fb5534cbe40274d3d0d95c, type: 3}
-  - {fileID: 2764519336324863074, guid: bf620e6dfb20af6428a49db83b079466, type: 3}
-  - {fileID: 6341726486474751358, guid: e78ec1ca4ad2b2345a02f2dae02990f8, type: 3}
-  - {fileID: 5503342570614946486, guid: 906064ff22c94e84cb3c907ebe1031e5, type: 3}
-  - {fileID: 7406555906262369701, guid: f2de7c5ad4119664184178ef218863fa, type: 3}
-  - {fileID: 3158697989357463180, guid: ed7aaab9298594146a1f43b1830abb96, type: 3}
+  TimeToNextWave: 10
+  StartFloor: 1
+  Enemies:
+  - {fileID: 4542056333658736601, guid: be7fd5e2e0e820c46988bdace741bf3e, type: 3}
+  - {fileID: 5934165206899752301, guid: 051b52352f630664aac1a73e5a828b86, type: 3}
+  StartCountEnemies: 1

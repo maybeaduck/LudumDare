@@ -35,7 +35,6 @@ namespace Zlodey
                 
                     bullet.Rigidbody.velocity = direction ; 
                 }
-                
             }
         }
     }

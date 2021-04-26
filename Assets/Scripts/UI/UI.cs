@@ -9,5 +9,6 @@ namespace Zlodey
         public WinScreen WinScreen;
         public LoseScreen LoseScreen;
         public AudioSource Audio;
+        public WaveScreen WaveScreen;
     }
 }

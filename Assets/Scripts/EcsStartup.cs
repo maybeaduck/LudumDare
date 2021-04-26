@@ -52,7 +52,14 @@ namespace Zlodey
                 .Add(new ShootFXSystem())
                 .Add(new DashSystem())
 
+                .Add(new CheckDeadEnemiesSystem())
+                .Add(new WaveSystem())
+                .Add(new SpawnSystem())
+                .Add(new NextFloorSystem())
+
                 .OneFrame<ShootEvent>()
+                .OneFrame<NextFloorEvent>()
+                .OneFrame<SpawnEvent>()
 
                 .Inject(_runtime)
                 .Inject(_config)
