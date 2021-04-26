@@ -7012,7 +7012,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1705170506918987032, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
       propertyPath: reloadTime
-      value: 2.15
+      value: 1.07
       objectReference: {fileID: 0}
     - target: {fileID: 1705170506918987032, guid: 2c0b797c5fa341648be0cea1f988ac13, type: 3}
       propertyPath: defaultAmunition
