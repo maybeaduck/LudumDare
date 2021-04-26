@@ -41,7 +41,7 @@ MonoBehaviour:
   - {fileID: 7406555906262369701, guid: f2de7c5ad4119664184178ef218863fa, type: 3}
   - {fileID: 3158697989357463180, guid: ed7aaab9298594146a1f43b1830abb96, type: 3}
   - {fileID: 6341726486474751358, guid: 4fc0c6bb3f4b79e488be97161f3cd4ea, type: 3}
-  TimeToNextWave: 10
+  TimeToNextWave: 99999
   StartFloor: 1
   Enemies:
   - {fileID: 4542056333658736601, guid: be7fd5e2e0e820c46988bdace741bf3e, type: 3}

@@ -108,6 +108,8 @@ namespace Zlodey
             {
                 _sceneData.PostProcess.SetActive(!_sceneData.PostProcess.activeSelf);
             }
+
+            _runtimeData.AudioSource.volume = _ui.MenuScreen.SettingsWindow.AudioSlider.value;
         }
     }
 
@@ -130,7 +132,7 @@ namespace Zlodey
 
             foreach (var item in _weaponDefoult)
             {
-                ref var weapon = ref _players.Get1(item).Weapon;
+                ref var weapon = ref _weaponDefoult.Get1(item).Weapon;
                 if (weapon.AllAmunitionInInvent != -1)
                 {
                     _weaponDefoult.GetEntity(item).Del<WeaponDefoult>();
