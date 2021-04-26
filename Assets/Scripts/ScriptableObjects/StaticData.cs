@@ -64,6 +64,25 @@ namespace Zlodey
         public Sprite ShotGunSprite;
         public Sprite SniperGunSprite;
         public GameObject DeffaultPistol;
+
+        [Header("Audio")]
+        public AudioClip CollectAmmoAudio;
+        public AudioClip CollectBandageAudio;
+        public AudioClip ShotAkAudio;
+        public AudioClip ShotBombGunAudio;
+        public AudioClip ShotDesertEagleAudio;
+        public AudioClip ShotFireGunAudio;
+        public AudioClip ShotFiveSevenAudio;
+        public AudioClip ShotMashinePistolAudio;
+        public AudioClip ShotShotGunAudio;
+        public AudioClip ShotSniperGunAudio;
+        public AudioClip ShotDeffaultPistolAudio;
+        public AudioClip SceletonAudio;
+        public AudioClip NextFloorAudio;
+        public AudioClip ReloadAudio;
+        public AudioClip DashAudio;
+        public AudioClip[] StepPlayerAudio;
+
     }
     [Serializable]
     public class drop

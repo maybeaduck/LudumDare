@@ -93,3 +93,18 @@ MonoBehaviour:
   ShotGunSprite: {fileID: 21300000, guid: 1d30f3349612af44f8acc3384e9a6351, type: 3}
   SniperGunSprite: {fileID: 21300000, guid: 8c8aa02f293f28542a53653e3474f0b9, type: 3}
   DeffaultPistol: {fileID: 7308670306824939902, guid: 5aff58b2bb53c0f4d8fc78832f5d571b, type: 3}
+  CollectAmmoAudio: {fileID: 8300000, guid: 18f32c415c0e4d545bc034ca21ec232b, type: 3}
+  CollectBandageAudio: {fileID: 8300000, guid: 78d372427c9e7aa40917d620347ef0e9, type: 3}
+  ShotAkAudio: {fileID: 8300000, guid: 2c917c0c336c44a40bad94a1ad51c225, type: 3}
+  ShotBombGunAudio: {fileID: 8300000, guid: a4910523df4cbf3428324eac0e77efea, type: 3}
+  ShotDesertEagleAudio: {fileID: 8300000, guid: 228e851026c22074e918dab6e784f756, type: 3}
+  ShotFireGunAudio: {fileID: 8300000, guid: e6a0c7a1637461e4194af0eec5283f5e, type: 3}
+  ShotFiveSevenAudio: {fileID: 8300000, guid: d62a2e70fcfc3e24c9cbb1123b2fb881, type: 3}
+  ShotMashinePistolAudio: {fileID: 8300000, guid: 313c9911522e53b48817b5660ea4f5e9, type: 3}
+  ShotShotGunAudio: {fileID: 8300000, guid: 984a439d12193584aa6b241b5134e108, type: 3}
+  ShotSniperGunAudio: {fileID: 8300000, guid: 9b9cf15026a70964db355e1fad7e8b79, type: 3}
+  ShotDeffaultPistolAudio: {fileID: 8300000, guid: 457d25f55f8f3f144af2266cf7d138f0, type: 3}
+  RunPlayerAudio: {fileID: 0}
+  SceletonAudio: {fileID: 0}
+  NextFloorAudio: {fileID: 0}
+  ReloadAudio: {fileID: 8300000, guid: edce7cac88b87e94a9a9b319ab00c9a6, type: 3}
