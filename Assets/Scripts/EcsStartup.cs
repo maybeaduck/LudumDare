@@ -56,6 +56,7 @@ namespace Zlodey
                 .Add(new WaveSystem())
                 .Add(new SpawnSystem())
                 .Add(new NextFloorSystem())
+                .Add(new WeaponUIUpdateSystem())
 
                 .OneFrame<ShootEvent>()
                 .OneFrame<NextFloorEvent>()

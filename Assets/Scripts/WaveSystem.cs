@@ -49,6 +49,57 @@ namespace Zlodey
             _ui.WaveScreen.WaveTime.gameObject.SetActive(isActive);
         }
     }
+    public class WeaponUIUpdateSystem : Injects, IEcsRunSystem
+    {
+        private EcsFilter<PersonData> _person;
+        public void Run()
+        {
+            foreach (var item in _person)
+            {
+                ref var weapon = ref _person.Get1(item).Weapon;
+
+                if (!weapon) return;
+
+                Sprite sprite;
+                    switch (weapon.name)
+                    {
+                        case "Ak":
+                            sprite = _staticData.AkSprite;
+                            break;
+                        case "BombGun":
+                            sprite = _staticData.BombGunSprite;
+                            break;
+                        case "DesertEagle":
+                            sprite = _staticData.DesertEagleSprite;
+                            break;
+                        case "FireGun":
+                            sprite = _staticData.FireGunSprite;
+                            break;
+                        case "FiveSeven":
+                            sprite = _staticData.FiveSevenSprite;
+                            break;
+                        case "MashinePistol":
+                            sprite = _staticData.MashinePistolSprite;
+                            break;
+                        case "ShotGun":
+                            sprite = _staticData.ShotGunSprite;
+                            break;
+                        case "SniperGun":
+                            sprite = _staticData.SniperGunSprite;
+                            break;
+
+                        default:
+                            sprite = _staticData.SniperGunSprite;
+                            break;
+                    }
+
+                    _ui.WaveScreen.WeaponImage.sprite = sprite;
+                    _ui.WaveScreen.AammoValue.text = weapon.ammunition.ToString();
+                    _ui.WaveScreen.AmmoValueMax.text = weapon.defaultAmunition.ToString();
+                
+            }
+        }
+    }
 
     internal struct NextWaveEvent
     {
