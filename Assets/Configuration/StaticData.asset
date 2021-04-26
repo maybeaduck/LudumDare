@@ -92,4 +92,4 @@ MonoBehaviour:
   MashinePistolSprite: {fileID: 21300000, guid: 2abfdcf1d7b36f64f85c314c7866ed16, type: 3}
   ShotGunSprite: {fileID: 21300000, guid: 1d30f3349612af44f8acc3384e9a6351, type: 3}
   SniperGunSprite: {fileID: 21300000, guid: 8c8aa02f293f28542a53653e3474f0b9, type: 3}
-  DeffaultPistol: {fileID: 7308670306824939902, guid: 5aff58b2bb53c0f4d8fc78832f5d571b, type: 3}
+  DeffaultPistol: {fileID: 4459087071528669388, guid: 4fc0c6bb3f4b79e488be97161f3cd4ea, type: 3}
