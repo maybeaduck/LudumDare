@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Boot.unity
     guid: f47a41dab53514444bd4c2daea95e9f8
   - enabled: 1
-    path: Assets/Scenes/LevelTemplate ybzpp maybeagoose.unity
-    guid: 28a968c65743a04469f77e76bab52cb2
+    path: Assets/Scenes/LevelTemplate ybzpp.unity
+    guid: deb26d4530a819d4aac3281eabaed211
   m_configObjects: {}
