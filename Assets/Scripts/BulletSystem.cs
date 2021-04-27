@@ -39,16 +39,16 @@ namespace Zlodey
                             _runtimeData.AudioSource.PlayOneShot(_staticData.ShotAkAudio, 0.5f); //audio
                             break;
                         case WeaponType.Sniper:
-                            _runtimeData.AudioSource.PlayOneShot(_staticData.ShotSniperGunAudio, 0.04f); //audio
+                            _runtimeData.AudioSource.PlayOneShot(_staticData.ShotSniperGunAudio, 0.01f); //audio
                             break;
                         case WeaponType.FiveSeven:
                             _runtimeData.AudioSource.PlayOneShot(_staticData.ShotFiveSevenAudio, 0.5f); //audio
                             break;
                         case WeaponType.FireGun:
-                            _runtimeData.AudioSource.PlayOneShot(_staticData.ShotFireGunAudio, 0.05f); //audio
+                            _runtimeData.AudioSource.PlayOneShot(_staticData.ShotFireGunAudio, 0.01f); //audio
                             break;
                         case WeaponType.DesertEagle:
-                            _runtimeData.AudioSource.PlayOneShot(_staticData.ShotDesertEagleAudio, 0.04f); //audio
+                            _runtimeData.AudioSource.PlayOneShot(_staticData.ShotDesertEagleAudio, 0.01f); //audio
                             break;
                         case WeaponType.MashineGun:
                             _runtimeData.AudioSource.PlayOneShot(_staticData.ShotMashinePistolAudio, 0.5f); //audio

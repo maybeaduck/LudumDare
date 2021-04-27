@@ -6518,7 +6518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4cbe9352056a67478325da026d647e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value: 120
+  Value: 35
   HealthSlider: {fileID: 1167558843304609666}
 --- !u!136 &3198906804808171797
 CapsuleCollider:

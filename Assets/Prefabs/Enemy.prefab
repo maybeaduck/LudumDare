@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4cbe9352056a67478325da026d647e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value: 250
+  Value: 100
   HealthSlider: {fileID: 4729681522363493743}
 --- !u!136 &6285651612036733814
 CapsuleCollider:
@@ -306,8 +306,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42e0f6cb52a584e40939cb918f129073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxValue: 15
-  MinValue: 20
+  MaxValue: 10
+  MinValue: 5
 --- !u!114 &5934165206899752306
 MonoBehaviour:
   m_ObjectHideFlags: 0
